@@ -489,9 +489,9 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-w
 }
 
 .specialty-item {
-  width: 110px;
-  max-width: 100%;
-  margin: auto;
+  width: 100%;
+  max-width: 110px;
+  margin: 0 auto;
 }
 .specialty-item .specialty-img {
   display: flex;
@@ -1009,6 +1009,28 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-w
   color: #fff;
 }
 
+.page-content {
+  padding: 30px 0 100px;
+}
+@media (max-width: 767px) {
+  .page-content {
+    padding: 40px 0 60px;
+  }
+}
+
+.page-title {
+  font-size: 24px;
+  color: #343434;
+  font-weight: 800;
+  line-height: 1.66666667;
+  margin: 0 0 20px;
+}
+@media (max-width: 767px) {
+  .page-title {
+    text-align: center;
+  }
+}
+
 header {
   background-color: #37a59b;
 }
@@ -1413,6 +1435,42 @@ header {
     display: block;
   }
 }
+.breadcrumb-section {
+  padding: 30px 0 0;
+  background-color: #F5FBFB;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .breadcrumb-section {
+    display: none;
+  }
+}
+
+.breadcrumb-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.breadcrumb-content li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #9b9b9b;
+  line-height: 1.572;
+}
+.breadcrumb-content li ~ li::before {
+  content: "/";
+  margin: 0 5px;
+}
+.breadcrumb-content li a {
+  color: inherit;
+  transition: all 0.3s ease-in-out;
+}
+.breadcrumb-content li a:hover {
+  color: #37a59b;
+}
+
 footer {
   background-color: #37a59b;
   position: relative;
@@ -1783,5 +1841,33 @@ html[dir=ltr] .contacts-list a:hover {
 @media (max-width: 991px) {
   .labs-section {
     padding: 40px 0 60px;
+  }
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  align-items: start;
+  gap: 30px 15px;
+}
+@media (max-width: 1199px) {
+  .specialties-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+@media (max-width: 991px) {
+  .specialties-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .specialties-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 10px;
+  }
+}
+@media (max-width: 480px) {
+  .specialties-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }/*# sourceMappingURL=main.css.map */
