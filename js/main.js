@@ -182,4 +182,31 @@ $(document).ready(function () {
       },
     },
   });
+
+  /************************************ Filters ************************************/
+  $(".filter-trigger").click(function (e) {
+    $(this).parents(".archive-sidebar").toggleClass("active");
+  });
+  $(".subspecialty-btn").click(function (e) {
+    $(".subspecialty-btn").removeClass("active");
+    $(this).addClass("active");
+    let filter = $(this).attr("id");
+    if (filter == "all") {
+      $(".doctor-item").show();
+    } else {
+      $(".doctor-item").hide();
+      $(".doctor-item[data-filter=" + filter + "]").show();
+    }
+  });
+  $(".filter-item .filter-title").click(function (e) {
+    $(this).siblings(".filter-values").slideToggle();
+    $(this).toggleClass("active");
+  });
+
+  /************************************ Form ************************************/
+  if ($(window).width() >= 992) {
+    $("select").select2({
+      minimumResultsForSearch: Infinity,
+    });
+  }
 });
