@@ -2400,7 +2400,7 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 .search-input .clear-btn:hover {
   color: #fc0e21;
 }
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .search-input .clear-btn {
     visibility: visible;
     opacity: 1;
