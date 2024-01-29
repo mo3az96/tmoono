@@ -2743,6 +2743,12 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   justify-content: space-between;
   margin-bottom: 15px;
 }
+@media (max-width: 767px) {
+  .card-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .card-head .card-title {
   font-size: 18px;
   font-weight: 800;
@@ -2750,9 +2756,31 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   line-height: 1.66666667;
   margin: 0;
 }
+@media (max-width: 767px) {
+  .card-head .search-input {
+    width: 100%;
+    margin-top: 7px;
+  }
+}
+.card-head .search-input input {
+  border: 1px solid #dee1e6;
+  width: 260px;
+  height: 40px;
+}
+.card-head .search-input input:focus {
+  border-color: #37a59b;
+}
+@media (max-width: 767px) {
+  .card-head .search-input input {
+    width: 100%;
+  }
+}
 
 .services-list {
   max-height: 455px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
   overflow-y: auto;
   padding-inline-end: 2px;
 }
@@ -2767,10 +2795,9 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 }
 .services-list .service-select {
   background-color: #f5fbfb;
-  padding: 11px 30px 12px;
+  padding: 12px 30px;
   width: 100%;
   position: relative;
-  margin-bottom: 10px;
 }
 @media (max-width: 767px) {
   .services-list .service-select {
@@ -2842,6 +2869,13 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 }
 .services-list .service-select .service-mark span.selected {
   display: none;
+}
+.services-list .service-select .service-condition {
+  font-size: 13px;
+  font-weight: 400;
+  display: flex;
+  margin: 2px 0 4px;
+  color: #e24a56;
 }
 .services-list .service-select input {
   position: absolute;
@@ -2974,6 +3008,55 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   font-weight: 600;
   color: #343434;
   margin: 0 0 10px;
+}
+.side-card .selected-services {
+  margin-bottom: 20px;
+}
+.side-card .selected-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-inline-end: 5px;
+  overflow-x: auto;
+  max-height: 223px;
+}
+.side-card .selected-list::-webkit-scrollbar {
+  background-color: #f1f1f1;
+  width: 4px;
+  border-radius: 3px;
+}
+.side-card .selected-list::-webkit-scrollbar-thumb {
+  background-color: #37a59b;
+  border-radius: 3px;
+}
+.side-card .selected-item {
+  width: 100%;
+  background-color: #f5fbfb;
+  padding: 14px 20px 13px;
+}
+.side-card .selected-item .service-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.side-card .selected-item .service-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #343434;
+  line-height: 1.57142857;
+  margin: 0;
+}
+.side-card .selected-item .service-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #37a59b;
+  line-height: 1.625;
+}
+.side-card .selected-item .service-condition {
+  display: flex;
+  font-size: 11px;
+  color: #e24a56;
+  margin-top: 3px;
 }
 .side-card .select-day {
   margin-bottom: 20px;
