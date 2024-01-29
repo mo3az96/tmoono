@@ -2559,9 +2559,6 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   align-items: flex-start;
   gap: 20px;
 }
-.checkout-page .single-content {
-  align-items: unset;
-}
 @media (max-width: 991px) {
   .single-content {
     grid-template-columns: 1fr;
@@ -2909,7 +2906,7 @@ html[dir=ltr] .filter-item .filter-title.active::after {
     font-size: 14px;
   }
 }
-.single-description .single-table {
+.single-description p ~ .single-table {
   margin-top: 20px;
 }
 
@@ -2954,6 +2951,9 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 .single-table .table-row a:hover {
   color: #37a59b;
   text-decoration: none;
+}
+.single-table ~ .selected-services {
+  margin-top: 20px;
 }
 
 .extras-imgs {
@@ -3008,55 +3008,6 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   font-weight: 600;
   color: #343434;
   margin: 0 0 10px;
-}
-.side-card .selected-services {
-  margin-bottom: 20px;
-}
-.side-card .selected-list {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding-inline-end: 5px;
-  overflow-x: auto;
-  max-height: 223px;
-}
-.side-card .selected-list::-webkit-scrollbar {
-  background-color: #f1f1f1;
-  width: 4px;
-  border-radius: 3px;
-}
-.side-card .selected-list::-webkit-scrollbar-thumb {
-  background-color: #37a59b;
-  border-radius: 3px;
-}
-.side-card .selected-item {
-  width: 100%;
-  background-color: #f5fbfb;
-  padding: 14px 20px 13px;
-}
-.side-card .selected-item .service-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.side-card .selected-item .service-title {
-  font-size: 14px;
-  font-weight: 400;
-  color: #343434;
-  line-height: 1.57142857;
-  margin: 0;
-}
-.side-card .selected-item .service-price {
-  font-size: 16px;
-  font-weight: 700;
-  color: #37a59b;
-  line-height: 1.625;
-}
-.side-card .selected-item .service-condition {
-  display: flex;
-  font-size: 11px;
-  color: #e24a56;
-  margin-top: 3px;
 }
 .side-card .select-day {
   margin-bottom: 20px;
@@ -3207,7 +3158,7 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   gap: 20px;
 }
 .side-card .select-payment {
-  margin-bottom: 77px;
+  margin-bottom: 20px;
 }
 .side-card .payment-list {
   display: grid;
@@ -3280,6 +3231,10 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   color: #888888;
   font-size: 12px;
   margin-top: 4px;
+  font-weight: 400;
+}
+.checkout-page .side-card .side-total {
+  font-weight: 700;
 }
 .side-card .checkbox {
   margin-bottom: 20px;
@@ -3305,6 +3260,66 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 .side-card .single-btn:hover {
   background-color: transparent;
   color: #37a59b;
+}
+
+.selected-services {
+  margin-bottom: 20px;
+}
+.selected-services .selected-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #343434;
+  margin: 0 0 10px;
+}
+.selected-services .selected-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-inline-end: 5px;
+  overflow-x: auto;
+  max-height: 223px;
+}
+.checkout-page .selected-services .selected-list {
+  max-height: none;
+  padding: 0;
+}
+.selected-services .selected-list::-webkit-scrollbar {
+  background-color: #f1f1f1;
+  width: 4px;
+  border-radius: 3px;
+}
+.selected-services .selected-list::-webkit-scrollbar-thumb {
+  background-color: #37a59b;
+  border-radius: 3px;
+}
+.selected-services .selected-item {
+  width: 100%;
+  background-color: #f5fbfb;
+  padding: 14px 20px 13px;
+}
+.selected-services .selected-item .service-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.selected-services .selected-item .service-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #343434;
+  line-height: 1.57142857;
+  margin: 0;
+}
+.selected-services .selected-item .service-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #37a59b;
+  line-height: 1.625;
+}
+.selected-services .selected-item .service-condition {
+  display: flex;
+  font-size: 11px;
+  color: #e24a56;
+  margin-top: 3px;
 }
 
 .success-content {
