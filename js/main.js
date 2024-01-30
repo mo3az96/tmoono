@@ -242,4 +242,9 @@ $(document).ready(function () {
       eye.removeClass("active");
     }
   });
+
+  flatpickr("input[type='date']", {
+    locale: document.dir == "rtl" ? "ar" : "en",
+    dateFormat: "d/m/Y",
+  });
 });

@@ -169,6 +169,10 @@ input::-ms-reveal {
 input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-webkit-search-results-button, input::-webkit-search-results-decoration {
   display: none;
 }
+input::-webkit-inner-spin-button, input::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
 
 select {
   background-image: url(../images/arrow.png);
@@ -791,6 +795,31 @@ html[dir=rtl] .form-group:has([type=tel]) .form-error {
   visibility: hidden;
 }
 
+.date-content {
+  position: relative;
+}
+.date-content .date-icon {
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  font-size: 18px;
+  color: #c2c2c2;
+  pointer-events: none;
+  border-end-end-radius: 24px;
+  border-start-end-radius: 24px;
+}
+@media (max-width: 991px) {
+  .date-content .date-icon {
+    pointer-events: unset;
+  }
+}
+
 /* select */
 .select2-container .select2-selection--single {
   padding: 0 16px;
@@ -898,6 +927,31 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
 .select2-container .select2-results__option.select2-results__option--highlighted.select2-results__option--selectable {
   background-color: transparent;
   color: #37a59b;
+}
+
+/*flatpicker*/
+html[dir=rtl] .flatpickr-current-month {
+  font-size: 130%;
+}
+
+.flatpickr-day:hover {
+  background-color: #f8f8f8;
+  border-color: #f8f8f8;
+}
+.flatpickr-day.flatpickr-day.today {
+  border-color: #37a59b;
+}
+.flatpickr-day.flatpickr-day.today:hover, .flatpickr-day.flatpickr-day.today:focus {
+  border-color: #37a59b;
+  background-color: #37a59b;
+}
+.flatpickr-day.selected {
+  border-color: #37a59b;
+  background-color: #37a59b;
+}
+.flatpickr-day.selected:hover, .flatpickr-day.selected:focus {
+  border-color: #37a59b;
+  background-color: #37a59b;
 }
 
 .account-tabs {
@@ -4111,4 +4165,110 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   background-color: #e7f5f4;
   border-radius: 5px;
   box-shadow: none;
+}
+
+.table-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1199px) {
+  .table-filters {
+    align-items: flex-end;
+    gap: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .table-filters {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 767px) {
+  .table-filters .search-input {
+    width: 100%;
+    margin-top: 7px;
+  }
+}
+.table-filters .search-input input {
+  width: 260px;
+}
+@media (max-width: 1199px) {
+  .table-filters .search-input input {
+    width: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .table-filters .search-input input {
+    width: 100%;
+  }
+}
+.table-filters .search-dates {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+@media (max-width: 1199px) {
+  .table-filters .search-dates {
+    gap: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .table-filters .search-dates {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    width: 100%;
+  }
+}
+.table-filters .search-date {
+  display: flex;
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+@media (max-width: 1199px) {
+  .table-filters .search-date {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .table-filters .search-date {
+    width: 100%;
+  }
+}
+.table-filters .search-date .date-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #343434;
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .table-filters .date-content {
+    width: 100%;
+  }
+}
+.table-filters .date-content input {
+  width: 200px;
+  height: 48px;
+  background-color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 0 20px;
+  font-size: 14px;
+  color: #c2c2c2;
+  text-align: right;
+}
+@media (max-width: 1199px) {
+  .table-filters .date-content input {
+    width: 175px;
+  }
+}
+@media (max-width: 767px) {
+  .table-filters .date-content input {
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
