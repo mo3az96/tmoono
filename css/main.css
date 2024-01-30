@@ -4004,4 +4004,111 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 .file-item .file-btn:hover {
   background-color: #E2F2F1;
   color: #37a59b;
+}
+
+.notifications-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.notifications-head .account-title {
+  margin: 0;
+}
+.notifications-head .notifications-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid #fa404f;
+  color: #fa404f;
+  height: 32px;
+  border-radius: 16px;
+  font-size: 16px;
+  padding: 0 20px;
+  transition: all 0.3s ease-in-out;
+}
+.notifications-head .notifications-btn .text {
+  font-size: 14px;
+  font-weight: 600;
+  margin-inline-start: 6px;
+}
+.notifications-head .notifications-btn:hover {
+  background-color: #fa404f;
+  color: #fff;
+}
+
+.accout-notifications {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.notification-item {
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(55, 165, 155, 0.1019607843);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  .notification-item {
+    padding: 15px 10px;
+  }
+}
+.notification-item .notification-icon {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #37a59b;
+  padding: 10px;
+}
+.notification-item .notification-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.notification-item .notification-info {
+  margin-inline-start: 20px;
+  margin-inline-end: 14px;
+  padding: 2px 0 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .notification-item .notification-info {
+    margin-inline: 10px;
+  }
+}
+.notification-item .notification-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #343434;
+  line-height: 1.7857142857;
+  text-align: justify;
+  margin: 0 0 5px;
+}
+.notification-item .notification-date {
+  font-size: 12px;
+  font-weight: 400;
+  color: #727272;
+  line-height: 1.5833334;
+}
+.notification-item:is(a):hover {
+  background-color: #e7f5f4;
+  border-radius: 5px;
+  box-shadow: none;
+}
+.notification-item.new {
+  background-color: #e7f5f4;
+  border-radius: 5px;
+  box-shadow: none;
 }/*# sourceMappingURL=main.css.map */
