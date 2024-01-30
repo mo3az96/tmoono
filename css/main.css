@@ -3913,8 +3913,6 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 .account-body {
   padding: 20px 0 0;
   max-width: 100%;
-  position: relative;
-  overflow: hidden;
 }
 
 .account-title {
