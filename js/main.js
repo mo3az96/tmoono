@@ -220,10 +220,9 @@ $(document).ready(function () {
   var input = $("input[type=tel]");
   for (let i = 0; i < input.length; i++) {
     intlTelInput(input[i], {
-      countrySearch: false,
       utilsScript: "js/utils.js",
       autoPlaceholder: "aggressive",
-      showSelectedDialCode: true,
+      separateDialCode: true,
       initialCountry: "sa",
       preferredCountries: ["sa", "kw", "ae", "bh", "om", "qa"],
     });
