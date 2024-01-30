@@ -203,10 +203,44 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
+  /************************************ Account Nav ************************************/
+  $(".accountNav-trigger").click(function (e) {
+    $(this).parents(".account-nav").toggleClass("active");
+  });
+  $(".main-link.has-list").click(function (e) {
+    $(this).toggleClass("active").siblings(".sub-list").slideToggle();
+  });
   /************************************ Form ************************************/
   if ($(window).width() >= 992) {
     $("select").select2({
       minimumResultsForSearch: Infinity,
     });
   }
+
+  var input = $("input[type=tel]");
+  for (let i = 0; i < input.length; i++) {
+    intlTelInput(input[i], {
+      countrySearch: false,
+      utilsScript: "js/utils.js",
+      autoPlaceholder: "aggressive",
+      showSelectedDialCode: true,
+      initialCountry: "sa",
+      preferredCountries: ["sa", "kw", "ae", "bh", "om", "qa"],
+    });
+  }
+
+  $(".password-toggle").click(function (e) {
+    if (e.isDefaultPrevented()) return;
+    e.preventDefault();
+    e.stopPropagation();
+    let eye = $(this);
+    let input = $(this).parents(".password-content").find("input.form-control");
+    if ($(input).attr("type") == "password") {
+      $(input).attr("type", "text");
+      eye.addClass("active");
+    } else {
+      $(input).attr("type", "password");
+      eye.removeClass("active");
+    }
+  });
 });
