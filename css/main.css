@@ -5053,6 +5053,131 @@ html[dir=ltr] .filter-item .filter-title.active::after {
     max-width: calc(50% - 5px);
   }
 }
+.reservation-body .tests-list {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
 .reservation-body :last-child {
   margin: 0;
+}
+
+.test-select {
+  background-color: #f5fbfb;
+  padding: 11px 20px 18px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+@media (max-width: 767px) {
+  .test-select {
+    padding: 10px 15px;
+    flex-direction: column;
+  }
+}
+.test-select .test-img {
+  width: 50px;
+  aspect-ratio: 1;
+  display: flex;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.test-select .test-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.test-select .test-info {
+  display: flex;
+  flex-direction: column;
+  margin-inline-start: 20px;
+  margin-inline-end: auto;
+  padding: 5px 0 0;
+}
+@media (max-width: 767px) {
+  .test-select .test-info {
+    margin: 0;
+    padding-top: 10px;
+  }
+}
+.test-select .test-title {
+  font-size: 16px;
+  color: #343434;
+  font-weight: 400;
+  line-height: 1.5625;
+  margin: 0 0 6px;
+}
+@media (max-width: 767px) {
+  .test-select .test-title {
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+.test-select .test-features {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .test-select .test-features {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+.test-select .test-features span {
+  font-size: 12px;
+  color: #727272;
+  line-height: 1.5833333334;
+}
+.test-select .test-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  border-radius: 16px;
+  min-width: 77px;
+  padding: 0 17px;
+  border: 1px solid #37a59b;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #37a59b;
+  margin: 5px 0 0;
+  transition: all 0.3s ease-in-out;
+}
+.test-select .test-mark span {
+  display: block;
+}
+.test-select .test-mark span.selected {
+  display: none;
+}
+@media (max-width: 767px) {
+  .test-select .test-mark {
+    margin-inline-start: auto;
+    margin-top: 10px;
+  }
+}
+.test-select input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.test-select input:checked ~ .test-mark {
+  color: #fff;
+  background-color: #37a59b;
+}
+.test-select input:checked ~ .test-mark span {
+  display: none;
+}
+.test-select input:checked ~ .test-mark span.selected {
+  display: block;
 }/*# sourceMappingURL=main.css.map */
