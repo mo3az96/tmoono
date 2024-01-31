@@ -4947,6 +4947,33 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   height: 14px;
   margin-inline-start: 10px;
 }
+.reservation-body .reservation-reason {
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .reservation-body .reservation-reason {
+    margin-bottom: 25px;
+  }
+}
+.reservation-body .reason-date {
+  font-size: 12px;
+  color: #b2b2b2;
+  display: flex;
+  line-height: 1.5833333334;
+  margin-bottom: 6px;
+}
+.reservation-body .reason-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #343434;
+  line-height: 1.77;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .reservation-body .reason-text {
+    font-size: 14px;
+  }
+}
 .reservation-body .reservation-footer {
   display: flex;
   align-items: center;
