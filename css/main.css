@@ -4863,6 +4863,20 @@ html[dir=ltr] .filter-item .filter-title.active::after {
     margin-bottom: 10px;
   }
 }
+.reservation-body .reschedule-table-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 15px;
+}
+.reservation-body .reschedule-table-head .reservation-title {
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .reservation-body .reschedule-table-head {
+    margin-bottom: 10px;
+  }
+}
 .reservation-body .reservation-table {
   margin-bottom: 40px;
 }
@@ -4903,7 +4917,7 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 }
 @media (max-width: 767px) {
   .reservation-body .table-row p:first-of-type {
-    width: 140px;
+    width: 175px;
   }
 }
 @media (max-width: 767px) {
