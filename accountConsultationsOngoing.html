@@ -201,14 +201,13 @@
                 <div class="reservation-head">
                   <h2 class="account-title">#123</h2>
                   <div class="reservation-tool">
-                    <button
-                      class="reservation-btn book-btn"
-                      data-bs-toggle="modal"
-                      data-bs-target="#rescheduleModal"
+                    <a
+                      class="reservation-btn"
+                      href="accountConsultationsChat.html"
                     >
-                      <i class="fa-regular fa-calendar"></i>
-                      <span class="text">إعادة جدولة موعد الجلسة</span>
-                    </button>
+                      <i class="fa-regular fa-messages"></i>
+                      <span class="text">محادثة مع الطبيب</span>
+                    </a>
                   </div>
                 </div>
                 <div class="reservation-body">
@@ -721,147 +720,6 @@
       </div>
     </div>
     <!-- End Report Modal -->
-
-    <!-- Start Reschedule Modal -->
-    <div
-      class="modal fade"
-      id="rescheduleModal"
-      tabindex="-1"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2 class="modal-title">إعادة جدولة موعد الجلسة</h2>
-            <button type="button" class="modal-close" data-bs-dismiss="modal">
-              <i class="fa-regular fa-xmark"></i>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="modal-form">
-              <div class="select-day">
-                <h4 class="side-title">حدد اليوم المناسب</h4>
-                <div class="days-list">
-                  <label class="day-select">
-                    <input type="radio" name="day" disabled />
-                    <div class="day-info">
-                      <span class="day"> أمس </span>
-                      <span class="date"> 12-16 </span>
-                    </div>
-                  </label>
-                  <label class="day-select">
-                    <input type="radio" name="day" />
-                    <div class="day-info">
-                      <span class="day"> اليوم </span>
-                      <span class="date"> 12-17 </span>
-                    </div>
-                  </label>
-                  <label class="day-select">
-                    <input type="radio" name="day" />
-                    <div class="day-info">
-                      <span class="day"> الأثنين </span>
-                      <span class="date"> 12-18 </span>
-                    </div>
-                  </label>
-                  <label class="day-select">
-                    <input type="radio" name="day" />
-                    <div class="day-info">
-                      <span class="day"> الثلاثاء </span>
-                      <span class="date"> 12-19 </span>
-                    </div>
-                  </label>
-                  <label class="day-select">
-                    <input type="radio" name="day" />
-                    <div class="day-info">
-                      <span class="day"> الأربعاء </span>
-                      <span class="date"> 12-20 </span>
-                    </div>
-                  </label>
-                  <label class="day-select">
-                    <input type="radio" name="day" />
-                    <div class="day-info">
-                      <span class="day"> الخميس </span>
-                      <span class="date"> 12-21 </span>
-                    </div>
-                  </label>
-                  <label class="day-select">
-                    <input type="radio" name="day" />
-                    <div class="day-info">
-                      <span class="day"> السبت </span>
-                      <span class="date"> 12-23 </span>
-                    </div>
-                  </label>
-                  <label class="day-select">
-                    <input type="radio" name="day" />
-                    <div class="day-info">
-                      <span class="day"> الأحد </span>
-                      <span class="date"> 12-24 </span>
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="select-time">
-                <h4 class="side-title">حدد الموعد المناسب</h4>
-                <div class="time-list">
-                  <label class="time-select">
-                    <input type="radio" name="time" disabled />
-                    <div class="time-info">
-                      <span>02:15 - 02:00 مساءًا</span>
-                    </div>
-                  </label>
-                  <label class="time-select">
-                    <input type="radio" name="time" />
-                    <div class="time-info">
-                      <span>02:15 - 02:00 مساءًا</span>
-                    </div>
-                  </label>
-                  <label class="time-select">
-                    <input type="radio" name="time" />
-                    <div class="time-info">
-                      <span>02:15 - 02:00 مساءًا</span>
-                    </div>
-                  </label>
-                  <label class="time-select">
-                    <input type="radio" name="time" />
-                    <div class="time-info">
-                      <span>02:15 - 02:00 مساءًا</span>
-                    </div>
-                  </label>
-                  <label class="time-select">
-                    <input type="radio" name="time" />
-                    <div class="time-info">
-                      <span>02:15 - 02:00 مساءًا</span>
-                    </div>
-                  </label>
-                  <label class="time-select">
-                    <input type="radio" name="time" />
-                    <div class="time-info">
-                      <span>02:15 - 02:00 مساءًا</span>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <a
-              href="accountConsultationsRescheduled.html"
-              class="modal-btn main-btn"
-            >
-              ارسال
-            </a>
-            <button
-              type="button"
-              class="modal-btn sec-btn"
-              data-bs-dismiss="modal"
-            >
-              إلغاء
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Reschedule Modal -->
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
