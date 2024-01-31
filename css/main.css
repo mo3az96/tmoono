@@ -819,6 +819,25 @@ html[dir=rtl] .form-group:has([type=tel]) .form-error {
     pointer-events: unset;
   }
 }
+.date-content::before {
+  content: attr(data-placeholder);
+  font-size: 14px;
+  color: #c2c2c2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-start: 20px;
+  line-height: 24px;
+  pointer-events: none;
+  background-color: #fff;
+  display: none;
+}
+.date-content:has(input:-moz-placeholder-shown)::before {
+  display: block;
+}
+.date-content:has(input:placeholder-shown)::before {
+  display: block;
+}
 
 /* select */
 .select2-container .select2-selection--single {
@@ -1006,6 +1025,74 @@ html[dir=rtl] .flatpickr-current-month {
     font-size: 12px;
     padding: 0 15px;
   }
+}
+
+.table-responsive {
+  border: none;
+}
+
+.table {
+  table-layout: fixed;
+  min-width: 850px;
+}
+.table th:first-of-type,
+.table td:first-of-type {
+  text-align: center;
+}
+.table th:last-of-type,
+.table td:last-of-type {
+  text-align: center;
+}
+.table th {
+  background-color: #37a59b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.57142857;
+  padding: 14px 5px;
+}
+.table td {
+  background-color: #fff;
+  border-bottom: 1px solid #ececec;
+  color: #343434;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.57142857;
+  padding: 14px 5px;
+}
+.table .method {
+  display: flex;
+  align-items: center;
+}
+.table .method .text {
+  margin-inline-end: 5px;
+}
+.table .method .img {
+  max-width: 25px;
+  max-height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table .method .img img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.table .invoice-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  font-size: 18px;
+  color: #c2c2c2;
+  transition: all 0.3s ease-in-out;
+}
+.table .invoice-links:hover {
+  color: #37a59b;
 }
 
 .section-head {
@@ -4171,6 +4258,7 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 @media (max-width: 1199px) {
   .table-filters {
@@ -4259,7 +4347,7 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   border-radius: 24px;
   padding: 0 20px;
   font-size: 14px;
-  color: #c2c2c2;
+  color: #343434;
   text-align: right;
 }
 @media (max-width: 1199px) {
