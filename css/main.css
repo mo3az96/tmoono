@@ -1029,6 +1029,12 @@ html[dir=rtl] .flatpickr-current-month {
 
 .table-responsive {
   border: none;
+  overflow: hidden;
+}
+@media (max-width: 1199px) {
+  .table-responsive {
+    overflow-x: auto;
+  }
 }
 
 .table {
