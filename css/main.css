@@ -4877,6 +4877,37 @@ html[dir=ltr] .filter-item .filter-title.active::after {
     margin-bottom: 10px;
   }
 }
+.reservation-body .reschedule-tool {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.reservation-body .reschedule-btn {
+  height: 36px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #54b75d;
+  transition: all 0.3s ease-in-out;
+}
+.reservation-body .reschedule-btn ~ .reschedule-btn {
+  background-color: #fa404f;
+}
+@media (max-width: 767px) {
+  .reservation-body .reschedule-btn {
+    padding: 0 15px;
+    font-size: 12px;
+  }
+}
+.reservation-body .reschedule-btn:hover {
+  color: #fff;
+  background-color: #37a59b;
+}
 .reservation-body .reservation-table {
   margin-bottom: 40px;
 }
