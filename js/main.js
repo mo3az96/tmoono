@@ -203,6 +203,16 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
+  $(".search-filter .search-select").change(function (e) {
+    let filter = $(this).val();
+
+    if (filter == "all") {
+      $(".reservation-content").show();
+    } else {
+      $(".reservation-content").hide();
+      $(".reservation-content[data-filter=" + filter + "]").show();
+    }
+  });
   /************************************ Account Nav ************************************/
   $(".accountNav-trigger").click(function (e) {
     $(this).parents(".account-nav").toggleClass("active");
