@@ -186,6 +186,14 @@ select {
 html[dir=ltr] select {
   background-position: right 25px top 50%;
 }
+@media (max-width: 767px) {
+  select {
+    background-position: left 10px top 50%;
+  }
+  html[dir=ltr] select {
+    background-position: right 10px top 50%;
+  }
+}
 
 .fa-linkedin::before {
   content: "\f0e1";
@@ -950,11 +958,10 @@ html[dir=rtl] .form-group:has([type=tel]) .form-error {
   justify-content: center;
   margin: 0 0 8px;
 }
-.file-content .file-placeholder .placeholder-icon img {
-  max-width: 100%;
+.file-content .file-placeholder .placeholder-icon svg {
+  width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  fill: #c3e2e0;
 }
 .file-content .file-placeholder .placeholder-text {
   font-size: 12px;
@@ -4430,6 +4437,7 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   align-items: center;
   justify-content: center;
   background-color: #37a59b;
+  fill: #fff;
   padding: 10px;
 }
 .notification-item .notification-icon img {
@@ -4826,7 +4834,16 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 }
 .reservation-head .reservation-btn.book-btn:hover {
   background-color: #37a59b;
-  border: 1px solid #37a59b;
+  border-color: #37a59b;
+  color: #fff;
+}
+.reservation-head .reservation-btn.back-btn {
+  background-color: #fff;
+  color: #37a59b;
+}
+.reservation-head .reservation-btn.back-btn:hover {
+  background-color: #37a59b;
+  border-color: #37a59b;
   color: #fff;
 }
 @media (max-width: 991px) {
@@ -4948,7 +4965,7 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 }
 @media (max-width: 767px) {
   .reservation-body .table-row p:first-of-type {
-    width: 175px;
+    width: 150px;
   }
 }
 @media (max-width: 767px) {
@@ -4981,7 +4998,8 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   .reservation-body .table-row .status {
     white-space: nowrap;
     flex-shrink: 0;
-    margin-inline-end: 85%;
+    padding: 0 8px;
+    font-size: 11px;
   }
 }
 .reservation-body .table-row .method {
@@ -5180,4 +5198,11 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 }
 .test-select input:checked ~ .test-mark span.selected {
   display: block;
+}
+
+.messenger-body {
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(55, 165, 155, 0.1019607843);
+  border-radius: 10px;
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */
