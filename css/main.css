@@ -1256,19 +1256,19 @@ html[dir=rtl] .flatpickr-current-month {
   }
 }
 
-.table {
+.transactions-table {
   table-layout: fixed;
   min-width: 850px;
 }
-.table th:first-of-type,
-.table td:first-of-type {
+.transactions-table th:first-of-type,
+.transactions-table td:first-of-type {
   text-align: center;
 }
-.table th:last-of-type,
-.table td:last-of-type {
+.transactions-table th:last-of-type,
+.transactions-table td:last-of-type {
   text-align: center;
 }
-.table th {
+.transactions-table th {
   background-color: #37a59b;
   color: #fff;
   font-size: 14px;
@@ -1276,7 +1276,7 @@ html[dir=rtl] .flatpickr-current-month {
   line-height: 1.57142857;
   padding: 14px 5px;
 }
-.table td {
+.transactions-table td {
   background-color: #fff;
   border-bottom: 1px solid #ececec;
   color: #343434;
@@ -1285,27 +1285,27 @@ html[dir=rtl] .flatpickr-current-month {
   line-height: 1.57142857;
   padding: 14px 5px;
 }
-.table .method {
+.transactions-table .method {
   display: flex;
   align-items: center;
 }
-.table .method .text {
+.transactions-table .method .text {
   margin-inline-end: 5px;
 }
-.table .method .img {
+.transactions-table .method .img {
   max-width: 25px;
   max-height: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.table .method .img img {
+.transactions-table .method .img img {
   max-width: 100%;
   max-height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.table .invoice-links {
+.transactions-table .invoice-links {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1316,7 +1316,7 @@ html[dir=rtl] .flatpickr-current-month {
   color: #c2c2c2;
   transition: all 0.3s ease-in-out;
 }
-.table .invoice-links:hover {
+.transactions-table .invoice-links:hover {
   color: #37a59b;
 }
 
@@ -5537,4 +5537,84 @@ html[dir=rtl] .message-form .message-send svg {
 .message-form .message-send:hover {
   background-color: #fff;
   fill: #37a59b;
+}
+
+.recommendations-table {
+  margin-bottom: 40px;
+}
+.recommendations-table .table {
+  width: 100%;
+}
+.recommendations-table .table th,
+.recommendations-table .table td {
+  padding: 14px 30px;
+}
+@media (max-width: 1199px) {
+  .recommendations-table .table th,
+  .recommendations-table .table td {
+    padding: 15px 20px;
+  }
+}
+@media (max-width: 767px) {
+  .recommendations-table .table th,
+  .recommendations-table .table td {
+    padding: 10px 0;
+  }
+}
+.recommendations-table .table th {
+  background-color: #E2F2F1;
+  font-size: 14px;
+  font-weight: 700;
+  color: #343434;
+  line-height: 1.57142857;
+}
+@media (max-width: 767px) {
+  .recommendations-table .table th {
+    display: none;
+  }
+}
+.recommendations-table .table td {
+  border-bottom: 1px solid #ececec;
+  font-size: 14px;
+  font-weight: 400;
+  color: #343434;
+  line-height: 1.57142857;
+}
+.recommendations-table .table td::before {
+  content: attr(data-title);
+  font-size: 14px;
+  font-weight: 700;
+  width: 110px;
+  flex-shrink: 0;
+  display: none;
+}
+@media (max-width: 767px) {
+  .recommendations-table .table td {
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .recommendations-table .table td::before {
+    display: block;
+  }
+  .recommendations-table .table td:last-of-type {
+    border-bottom: 1px solid #ececec;
+  }
+  .recommendations-table .table td[data-title="#"] {
+    display: none;
+  }
+}
+.recommendations-table .table .notes {
+  max-width: 350px;
+}
+.recommendations-table .table a {
+  font-size: 14px;
+  color: #37a59b;
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+.recommendations-table .table a:hover {
+  opacity: 0.7;
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
