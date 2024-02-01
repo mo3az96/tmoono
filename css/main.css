@@ -351,6 +351,10 @@ html[dir=ltr] select {
   max-width: 154px;
   margin: 0;
 }
+.modal .radio ~ .modal-textarea {
+  pointer-events: none;
+  opacity: 0.5;
+}
 .modal .radio:has(:checked) ~ .modal-textarea {
   opacity: 1;
   pointer-events: unset;
@@ -366,8 +370,6 @@ html[dir=ltr] select {
   color: #343434;
   line-height: 1.57142857;
   padding: 13px 25px;
-  pointer-events: none;
-  opacity: 0.5;
   margin-top: 15px;
   transition: all 0.3s ease-in-out;
 }
@@ -1162,6 +1164,38 @@ html[dir=rtl] .flatpickr-current-month {
 .flatpickr-day.selected:hover, .flatpickr-day.selected:focus {
   border-color: #37a59b;
   background-color: #37a59b;
+}
+
+/*rateing*/
+.rating-stars {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.rating-stars .rating-star {
+  fill: #e0e0e0;
+  width: 36px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.rating-stars .rating-star svg {
+  width: 100%;
+  max-height: 100%;
+}
+.rating-stars .rating-star:hover {
+  fill: #ffd43b;
+}
+.rating-stars .rating-star:hover ~ .rating-star {
+  fill: #ffd43b;
+}
+.rating-stars input {
+  display: none;
+}
+.rating-stars input:checked ~ .rating-star {
+  fill: #ffd43b;
 }
 
 .account-tabs {
@@ -5080,6 +5114,39 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+}
+.reservation-body .reservation-alert {
+  display: flex;
+  padding: 8px 14px 6px;
+  background-color: #f8aa25;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.57142857;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .reservation-body .reservation-alert {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+.reservation-body .reservation-alert i {
+  display: flex;
+  align-items: center;
+  margin-inline-end: 8px;
+}
+.reservation-body .reservation-rate {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 18px;
+  color: #e0e0e0;
+  margin-bottom: 9px;
+}
+.reservation-body .reservation-rate .active {
+  color: #ffd43b;
 }
 .reservation-body :last-child {
   margin: 0;

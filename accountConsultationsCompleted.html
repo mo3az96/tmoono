@@ -227,6 +227,10 @@
                   </div>
                 </div>
                 <div class="reservation-body">
+                  <div class="reservation-alert">
+                    <i class="fa-regular fa-triangle-exclamation"></i>
+                    آخر موعد لتحديد جلسة الإعادة (الأحد 17-12-2023)
+                  </div>
                   <h3 class="reservation-title">تفاصيل الحجز</h3>
                   <div class="reservation-table">
                     <div class="table-row">
@@ -239,7 +243,7 @@
                     </div>
                     <div class="table-row">
                       <p>حالة الحجز</p>
-                      <p><span class="status reported"> به مشكلة </span></p>
+                      <p><span class="status completed"> منتهي </span></p>
                     </div>
                     <div class="table-row">
                       <p>اسم الطبيب</p>
@@ -651,12 +655,32 @@
           </div>
           <div class="modal-body">
             <div class="modal-form">
-              <div class="form-group">
-                <textarea
-                  class="modal-textarea"
-                  placeholder="ادخل وصف نصي لا يقل عن 250 حرف"
-                ></textarea>
+              <div class="rating-stars">
+                <input id="rate5" name="rating" type="radio" value="5" />
+                <label class="rating-star" for="rate5" title="5">
+                  <img src="images/icons/star.svg" class="svg" />
+                </label>
+                <input id="rate4" name="rating" type="radio" value="4" />
+                <label class="rating-star" for="rate4" title="4">
+                  <img src="images/icons/star.svg" class="svg" />
+                </label>
+                <input id="rate3" name="rating" type="radio" value="3" />
+                <label class="rating-star" for="rate3" title="3">
+                  <img src="images/icons/star.svg" class="svg" />
+                </label>
+                <input id="rate2" name="rating" type="radio" value="2" />
+                <label class="rating-star" for="rate2" title="2">
+                  <img src="images/icons/star.svg" class="svg" />
+                </label>
+                <input id="rate1" name="rating" type="radio" value="1" />
+                <label class="rating-star" for="rate1" title="1">
+                  <img src="images/icons/star.svg" class="svg" />
+                </label>
               </div>
+              <textarea
+                class="modal-textarea"
+                placeholder="ادخل وصف نصي لا يقل عن 250 حرف"
+              ></textarea>
             </div>
           </div>
           <div class="modal-footer">
@@ -677,12 +701,7 @@
     <!-- End Rate Modal -->
 
     <!-- Start Book Return Appointment Modal -->
-    <div
-      class="modal fade"
-      id="returnModal"
-      tabindex="-1"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="returnModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
