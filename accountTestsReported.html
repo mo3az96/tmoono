@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
+    <title>Tmoono | #123</title>
+    <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/fancybox.css" />
+    <link rel="stylesheet" href="css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/flatpicker.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <header>
+      <div class="container-fluid">
+        <div class="header">
+          <button class="menu-btn">
+            <i class="fa-regular fa-bars"></i>
+          </button>
+          <a href="indexLogged.html" class="logo">
+            <img src="images/logo.svg" class="img-fluid" />
+          </a>
+          <div class="overlay"></div>
+          <nav class="header-nav">
+            <div class="nav-head">
+              <div class="nav-logo">
+                <img src="images/logo.svg" class="img-fluid" />
+              </div>
+              <button class="menu-close">
+                <i class="fa-regular fa-xmark"></i>
+              </button>
+            </div>
+            <ul class="header-list">
+              <li>
+                <a href="indexLogged.html"> الرئيسية </a>
+              </li>
+              <li>
+                <a href="about.html"> من نحن </a>
+              </li>
+              <li>
+                <a href="specialtiesList.html"> التخصصات </a>
+              </li>
+              <li>
+                <a href="labsList.html"> مختبرات التحاليل </a>
+              </li>
+              <li>
+                <a href="blogList.html"> المقالات </a>
+              </li>
+              <li>
+                <a href="contact.html"> تواصل معنا </a>
+              </li>
+              <li class="nav-lang">
+                <div class="lang-content">
+                  <button type="button" class="lang-head header-link">
+                    <i class="fa-regular fa-globe"></i>
+                    <span class="text"> العربية </span>
+                  </button>
+                  <div class="lang-list">
+                    <a href="#!"> العربية </a>
+                    <a href="#!"> English </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-tools">
+            <div class="lang-content">
+              <button type="button" class="lang-head header-link">
+                <i class="fa-regular fa-globe"></i>
+                <span class="text"> العربية </span>
+              </button>
+              <div class="lang-list">
+                <a href="#!"> العربية </a>
+                <a href="#!"> English </a>
+              </div>
+            </div>
+            <button
+              class="header-address header-link"
+              data-bs-toggle="modal"
+              data-bs-target="#cityModal"
+            >
+              <i class="fa-regular fa-location-dot"></i>
+              <span class="text">المدينة المنورة</span>
+            </button>
+            <a
+              href="accountNotifications.html"
+              class="notifications-link header-link active"
+            >
+              <i class="fa-regular fa-bell"></i>
+              <span class="text"> الإشعارات </span>
+            </a>
+            <a href="account.html" class="header-btn header-link">
+              <i class="fa-regular fa-user"></i>
+              <span class="text"> حسابي </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Breadcrumb -->
+    <section class="breadcrumb-section">
+      <div class="container">
+        <ul class="breadcrumb-content">
+          <li>
+            <a href="indexLogged.html">الرئيسية</a>
+          </li>
+          <li>حسابي</li>
+        </ul>
+      </div>
+    </section>
+    <!-- End Breadcrumb -->
+
+    <!-- Start Page Content -->
+    <section class="page-content account-page">
+      <div class="container">
+        <h1 class="page-title">مرحبًا عبدالله صالح</h1>
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-12">
+            <div class="account-nav">
+              <ul class="account-list">
+                <li>
+                  <a class="main-link has-list" role="button">
+                    <i class="fa-light fa-user"></i>
+                    الملف الشخصي
+                  </a>
+                  <ul class="sub-list">
+                    <li>
+                      <a href="account.html" class="sub-link">
+                        تعديل بيانات الحساب
+                      </a>
+                    </li>
+                    <li>
+                      <a href="accountPassword.html" class="sub-link">
+                        تغيير كلمة المرور
+                      </a>
+                    </li>
+                    <li>
+                      <a href="accountHealthInfo.html" class="sub-link">
+                        البيانات الصحية
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="main-link active" href="accountReservations.html">
+                    <i class="fa-light fa-list-check"></i>
+                    حجوزاتي
+                  </a>
+                </li>
+                <li>
+                  <a class="main-link" href="accountTransactions.html">
+                    <i class="fa-light fa-rectangle-history"></i>
+                    سجل المدفوعات والمستردات
+                  </a>
+                </li>
+                <li>
+                  <a class="main-link" href="accountFavorites.html">
+                    <i class="fa-light fa-heart"></i>
+                    المفضلة
+                  </a>
+                </li>
+                <li>
+                  <a class="main-link" href="accountNotifications.html">
+                    <i class="fa-light fa-bell"></i>
+                    الإشعارات
+                  </a>
+                </li>
+                <li>
+                  <a class="main-link" href="index.html">
+                    <i class="fa-light fa-right-from-bracket"></i>
+                    تسجيل خروج
+                  </a>
+                </li>
+                <li>
+                  <a class="main-link" href="#!">
+                    <i class="fa-light fa-trash-can"></i>
+                    حذف الحساب
+                  </a>
+                </li>
+              </ul>
+              <button class="accountNav-trigger">
+                <i class="fa-light fa-user-gear"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-xl-9 col-lg-8 col-12">
+            <div class="account-body">
+              <div class="reservation-content">
+                <div class="reservation-head">
+                  <h2 class="account-title">#123</h2>
+                  <div class="reservation-tool">
+                    <button
+                      class="reservation-btn book-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#rescheduleModal"
+                    >
+                      <i class="fa-regular fa-calendar"></i>
+                      <span class="text">إعادة جدولة موعد الحجز</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="reservation-body">
+                  <h3 class="reservation-title">تفاصيل الحجز</h3>
+                  <div class="reservation-table">
+                    <div class="table-row">
+                      <p>الرقم التعريفي</p>
+                      <p>201587</p>
+                    </div>
+                    <div class="table-row">
+                      <p>تاريخ الإنشاء</p>
+                      <p>2023/12/12 - 10:35</p>
+                    </div>
+                    <div class="table-row">
+                      <p>حالة الحجز</p>
+                      <p><span class="status reported"> به مشكلة </span></p>
+                    </div>
+                    <div class="table-row">
+                      <p>اسم المختبر</p>
+                      <p>
+                        <a href="labDetails.html">مختبرات البرج الطبية</a>
+                      </p>
+                    </div>
+                    <div class="table-row">
+                      <p>المدينة</p>
+                      <p>ينبع</p>
+                    </div>
+                    <div class="table-row">
+                      <p>التاريخ المحدد للجلسة</p>
+                      <p>الأحد 2023-12-17</p>
+                    </div>
+                    <div class="table-row">
+                      <p>المدة المحددة للجلسة</p>
+                      <p>02:15 - 02:00 مساءًأ</p>
+                    </div>
+                  </div>
+                  <h3 class="reservation-title">سبب المشكلة</h3>
+                  <div class="reservation-reason">
+                    <span class="reason-date">2023/12/12 - 10:35</span>
+                    <p class="reason-text">
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل
+                      توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام
+                      طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما-
+                      للأحرف عوضاً عن استخدام "هنا يوجد محتوى نص"
+                    </p>
+                  </div>
+                  <h3 class="reservation-title">التحاليل المطلوبة</h3>
+                  <div class="tests-list">
+                    <div class="selected-test">
+                      <div class="test-information">
+                        <h3 class="test-title">فحص تعداد الدم الكامل</h3>
+                        <span class="test-condition">
+                          الشروط: صيام لمدة 12 ساعة قبل الإختبار
+                        </span>
+                      </div>
+                      <div class="test-tools">
+                        <span class="test-price"> 650 ر.س </span>
+                      </div>
+                    </div>
+                    <div class="selected-test">
+                      <div class="test-information">
+                        <h3 class="test-title">فحص تعداد الدم الكامل</h3>
+                        <span class="test-condition">
+                          الشروط: صيام لمدة 12 ساعة قبل الإختبار
+                        </span>
+                      </div>
+                      <div class="test-tools">
+                        <span class="test-price"> 650 ر.س </span>
+                      </div>
+                    </div>
+                  </div>
+                  <h3 class="reservation-title">تفاصيل الدفع</h3>
+                  <div class="reservation-table">
+                    <div class="table-row">
+                      <p>تكلفة الخدمة</p>
+                      <p>650 ر.س</p>
+                    </div>
+                    <div class="table-row">
+                      <p>طريقة الدفع</p>
+                      <p>
+                        <span class="method">
+                          ماستر كارت
+                          <img src="images/payments/4.png" />
+                        </span>
+                      </p>
+                    </div>
+                    <div class="table-row">
+                      <p>تاريخ ووقت الدفع</p>
+                      <p>2023/12/12 - 10:35</p>
+                    </div>
+                    <div class="table-row">
+                      <p>الفاتورة</p>
+                      <p>
+                        <a href="#!" download class="invoice">تحميل الفاتورة</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="reservation-footer">
+                    <button
+                      class="footer-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#cancelModal"
+                    >
+                      <i class="fa-regular fa-xmark"></i>
+                      إلغاء الحجز
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Page Content -->
+
+    <!-- Start Footer -->
+    <footer>
+      <div class="pattern">
+        <img src="images/pattern/footer.svg" />
+      </div>
+      <div class="container">
+        <div class="footer">
+          <div class="row">
+            <div class="col-lg-3 col-12">
+              <div class="footer-information">
+                <div class="footer-logo">
+                  <img src="images/logoFooter.svg" class="img-fluid" />
+                </div>
+                <div class="socials">
+                  <a href="#!" class="social" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="#!" class="social" target="_blank">
+                    <i class="fa-brands fa-snapchat"></i>
+                  </a>
+                  <a href="#!" class="social" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="#!" class="social" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                </div>
+                <div class="payments">
+                  <img src="images/payment.png" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 col-md-6">
+              <div class="footer-nav">
+                <h4 class="footer-title acc-title">روابط هامة</h4>
+                <div class="footer-lists">
+                  <ul class="footer-list">
+                    <li>
+                      <a href="about.html">من نحن</a>
+                    </li>
+                    <li>
+                      <a href="faq.html">الأسئلة الشائعة</a>
+                    </li>
+                    <li>
+                      <a href="terms.html">الشروط والأحكام</a>
+                    </li>
+                    <li>
+                      <a href="privacyPolicy.html">سياسة الخصوصية</a>
+                    </li>
+                    <li>
+                      <a href="refundPolicy.html">سياسة الإلغاء والإسترداد</a>
+                    </li>
+                  </ul>
+                  <ul class="footer-list">
+                    <li>
+                      <a href="authenticationRegisterDoctor.html">
+                        اشترك معنا كطبيب
+                      </a>
+                    </li>
+                    <li>
+                      <a href="authenticationRegisterLab.html">
+                        اشترك معنا كمختبر تحليل
+                      </a>
+                    </li>
+                    <li>
+                      <a href="contact.html">تواصل معنا</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 offset-xl-1 col-md-6">
+              <div class="footer-contacts">
+                <h4 class="footer-title acc-title">معلومات التواصل</h4>
+                <ul class="contacts-list">
+                  <li>
+                    <a href="tel:0114556515">
+                      <i class="fa-regular fa-phone"></i>
+                      <span> 0114556515 </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:care@tmoono.com">
+                      <i class="fa-regular fa-envelope"></i>
+                      <span> care@tmoono.com </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-download">
+                <h4 class="footer-title">حمل تطبيق تمونوا الآن</h4>
+                <div class="download-btns">
+                  <a href="#!" target="_blank" class="download-btn">
+                    <img src="images/download/1.svg" alt="Google Play" />
+                  </a>
+                  <a href="#!" target="_blank" class="download-btn">
+                    <img src="images/download/2.svg" alt="App Store" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyrights">
+          <p>تمونوا 2024 ©</p>
+          <p>
+            تصميم وتطوير
+            <a href="https://targetlines.com/" target="_blank">
+              <img
+                src="images/targetlines.png"
+                alt="targetlines"
+                class="img-fluid"
+              />
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Select City Modal -->
+    <div class="modal fade" id="cityModal" tabindex="-1" aria-hidden="true">
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">اختر المدينه</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <i class="fa-regular fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="city-grid">
+              <div class="city-item">
+                <input type="radio" name="city" />
+                <div class="city-content">
+                  <span class="city-mark"> </span>
+                  <span class="city-name"> الرياض </span>
+                </div>
+              </div>
+              <div class="city-item">
+                <input type="radio" name="city" />
+                <div class="city-content">
+                  <span class="city-mark"> </span>
+                  <span class="city-name"> جدة </span>
+                </div>
+              </div>
+              <div class="city-item">
+                <input type="radio" name="city" />
+                <div class="city-content">
+                  <span class="city-mark"> </span>
+                  <span class="city-name"> مكة </span>
+                </div>
+              </div>
+              <div class="city-item">
+                <input type="radio" name="city" checked />
+                <div class="city-content">
+                  <span class="city-mark"> </span>
+                  <span class="city-name"> المدينة المنورة </span>
+                </div>
+              </div>
+              <div class="city-item">
+                <input type="radio" name="city" />
+                <div class="city-content">
+                  <span class="city-mark"> </span>
+                  <span class="city-name"> الدمام </span>
+                </div>
+              </div>
+              <div class="city-item">
+                <input type="radio" name="city" />
+                <div class="city-content">
+                  <span class="city-mark"> </span>
+                  <span class="city-name"> تبوك </span>
+                </div>
+              </div>
+              <div class="city-item">
+                <input type="radio" name="city" />
+                <div class="city-content">
+                  <span class="city-mark"> </span>
+                  <span class="city-name"> بريدة </span>
+                </div>
+              </div>
+              <div class="city-item">
+                <input type="radio" name="city" />
+                <div class="city-content">
+                  <span class="city-mark"> </span>
+                  <span class="city-name"> الطائف </span>
+                </div>
+              </div>
+              <div class="city-item">
+                <input type="radio" name="city" />
+                <div class="city-content">
+                  <span class="city-mark"> </span>
+                  <span class="city-name"> حائل </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="modal-btn main-btn">حفظ</button>
+            <button
+              type="button"
+              class="modal-btn sec-btn"
+              data-bs-dismiss="modal"
+            >
+              إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Select City Modal -->
+
+    <!-- Start Cancel Modal -->
+    <div class="modal fade" id="cancelModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">حدد سبب الإلغاء</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <i class="fa-regular fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-form">
+              <div class="form-group">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="cancel" />
+                    <span class="mark"> </span>
+                    <span class="text"> مضطر للإلغاء لأسباب خاصة </span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="cancel" />
+                    <span class="mark"> </span>
+                    <span class="text"> سأقوم بالحجز مرة اخرى لاحقًا </span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="cancel" />
+                    <span class="mark"> </span>
+                    <span class="text"> سبب اخر </span>
+                  </label>
+                </div>
+                <textarea
+                  class="modal-textarea"
+                  placeholder="ادخل وصف نصي لا يقل عن 250 حرف"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a
+              href="accountTestsCanceled.html"
+              class="modal-btn main-btn"
+            >
+              ارسال
+            </a>
+            <button
+              type="button"
+              class="modal-btn sec-btn"
+              data-bs-dismiss="modal"
+            >
+              إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Cancel Modal -->
+
+    <!-- Start Reschedule Modal -->
+    <div
+      class="modal fade"
+      id="rescheduleModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">إعادة جدولة موعد الجلسة</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <i class="fa-regular fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-form">
+              <div class="select-day">
+                <h4 class="side-title">حدد اليوم المناسب</h4>
+                <div class="days-list">
+                  <label class="day-select">
+                    <input type="radio" name="day" disabled />
+                    <div class="day-info">
+                      <span class="day"> أمس </span>
+                      <span class="date"> 12-16 </span>
+                    </div>
+                  </label>
+                  <label class="day-select">
+                    <input type="radio" name="day" />
+                    <div class="day-info">
+                      <span class="day"> اليوم </span>
+                      <span class="date"> 12-17 </span>
+                    </div>
+                  </label>
+                  <label class="day-select">
+                    <input type="radio" name="day" />
+                    <div class="day-info">
+                      <span class="day"> الأثنين </span>
+                      <span class="date"> 12-18 </span>
+                    </div>
+                  </label>
+                  <label class="day-select">
+                    <input type="radio" name="day" />
+                    <div class="day-info">
+                      <span class="day"> الثلاثاء </span>
+                      <span class="date"> 12-19 </span>
+                    </div>
+                  </label>
+                  <label class="day-select">
+                    <input type="radio" name="day" />
+                    <div class="day-info">
+                      <span class="day"> الأربعاء </span>
+                      <span class="date"> 12-20 </span>
+                    </div>
+                  </label>
+                  <label class="day-select">
+                    <input type="radio" name="day" />
+                    <div class="day-info">
+                      <span class="day"> الخميس </span>
+                      <span class="date"> 12-21 </span>
+                    </div>
+                  </label>
+                  <label class="day-select">
+                    <input type="radio" name="day" />
+                    <div class="day-info">
+                      <span class="day"> السبت </span>
+                      <span class="date"> 12-23 </span>
+                    </div>
+                  </label>
+                  <label class="day-select">
+                    <input type="radio" name="day" />
+                    <div class="day-info">
+                      <span class="day"> الأحد </span>
+                      <span class="date"> 12-24 </span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="select-time">
+                <h4 class="side-title">حدد الموعد المناسب</h4>
+                <div class="time-list">
+                  <label class="time-select">
+                    <input type="radio" name="time" disabled />
+                    <div class="time-info">
+                      <span>02:15 - 02:00 مساءًا</span>
+                    </div>
+                  </label>
+                  <label class="time-select">
+                    <input type="radio" name="time" />
+                    <div class="time-info">
+                      <span>02:15 - 02:00 مساءًا</span>
+                    </div>
+                  </label>
+                  <label class="time-select">
+                    <input type="radio" name="time" />
+                    <div class="time-info">
+                      <span>02:15 - 02:00 مساءًا</span>
+                    </div>
+                  </label>
+                  <label class="time-select">
+                    <input type="radio" name="time" />
+                    <div class="time-info">
+                      <span>02:15 - 02:00 مساءًا</span>
+                    </div>
+                  </label>
+                  <label class="time-select">
+                    <input type="radio" name="time" />
+                    <div class="time-info">
+                      <span>02:15 - 02:00 مساءًا</span>
+                    </div>
+                  </label>
+                  <label class="time-select">
+                    <input type="radio" name="time" />
+                    <div class="time-info">
+                      <span>02:15 - 02:00 مساءًا</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a
+              href="accountTestsRescheduled.html"
+              class="modal-btn main-btn"
+            >
+              ارسال
+            </a>
+            <button
+              type="button"
+              class="modal-btn sec-btn"
+              data-bs-dismiss="modal"
+            >
+              إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Reschedule Modal -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/flatpicker.min.js"></script>
+    <script src="js/ar.js"></script>
+    <script src="js/lazyload.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/svg.js"></script>
+  </body>
+</html>
