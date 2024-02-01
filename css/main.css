@@ -270,9 +270,11 @@ html[dir=ltr] select {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 400px) {
   .modal .modal-dialog {
     --bs-modal-width: 375px;
+    margin-inline: auto;
+    width: var(--bs-modal-width);
   }
 }
 @media (min-width: 992px) {
@@ -1208,12 +1210,6 @@ html[dir=rtl] .flatpickr-current-month {
 .account-tabs button.active {
   background-color: #fff;
   border-color: #37a59b;
-}
-@media (max-width: 767px) {
-  .account-tabs button {
-    font-size: 12px;
-    padding: 0 15px;
-  }
 }
 
 .table-responsive {
@@ -4292,6 +4288,11 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   line-height: 1.65;
   margin: 0 0 20px;
 }
+@media (max-width: 767px) {
+  .account-title {
+    font-size: 18px;
+  }
+}
 
 .account-tab .checkboxes {
   padding-top: 10px;
@@ -4790,6 +4791,8 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 0;
   margin-bottom: 16px;
 }
 .reservation-head .account-title {
@@ -4802,7 +4805,7 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 }
 @media (max-width: 991px) {
   .reservation-head .reservation-tool {
-    gap: 8px;
+    gap: 5px;
   }
 }
 .reservation-head .reservation-btn {
@@ -4848,12 +4851,12 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 }
 @media (max-width: 991px) {
   .reservation-head .reservation-btn {
-    padding: 0 15px;
+    padding: 0 10px;
     font-size: 12px;
   }
   .reservation-head .reservation-btn i {
-    font-size: 14px;
-    margin-inline-end: 5px;
+    font-size: 12px;
+    margin-inline-end: 3px;
   }
 }
 
@@ -4865,7 +4868,7 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 }
 @media (max-width: 767px) {
   .reservation-body {
-    padding: 20px 15px 40px;
+    padding: 20px 10px 40px;
   }
 }
 .reservation-body .reservation-title {
@@ -4877,6 +4880,7 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 }
 @media (max-width: 767px) {
   .reservation-body .reservation-title {
+    font-size: 16px;
     margin-bottom: 10px;
   }
 }
@@ -4943,8 +4947,8 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 }
 @media (max-width: 767px) {
   .reservation-body .table-row {
-    padding: 7px 10px;
-    gap: 10px;
+    padding: 7px;
+    gap: 7px;
   }
 }
 .reservation-body .table-row:nth-of-type(odd) {
