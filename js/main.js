@@ -187,15 +187,15 @@ $(document).ready(function () {
   $(".filter-trigger").click(function (e) {
     $(this).parents(".archive-sidebar").toggleClass("active");
   });
-  $(".subspecialty-btn").click(function (e) {
-    $(".subspecialty-btn").removeClass("active");
+  $(".filter-btn").click(function (e) {
+    $(".filter-btn").removeClass("active");
     $(this).addClass("active");
     let filter = $(this).attr("id");
     if (filter == "all") {
-      $(".doctor-item").show();
+      $("[data-filter]").show();
     } else {
-      $(".doctor-item").hide();
-      $(".doctor-item[data-filter=" + filter + "]").show();
+      $("[data-filter]").hide();
+      $("[data-filter=" + filter + "]").show();
     }
   });
   $(".filter-item .filter-title").click(function (e) {
