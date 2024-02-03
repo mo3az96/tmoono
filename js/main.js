@@ -183,6 +183,45 @@ $(document).ready(function () {
     },
   });
 
+  /************************************ blog Slider ************************************/
+  var blogSwiper = new Swiper(".blog-slider .swiper", {
+    a11y: {
+      enabled: false,
+    },
+    loop: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 15,
+      },
+      1199: {
+        slidesPerView: 4,
+        spaceBetween: 31,
+      },
+    },
+    pagination: {
+      el: ".blog-slider .slider-pagination",
+      clickable: true,
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
+
   /************************************ Filters ************************************/
   $(".filter-trigger").click(function (e) {
     $(this).parents(".archive-sidebar").toggleClass("active");
@@ -212,6 +251,11 @@ $(document).ready(function () {
       $(".reservation-content").hide();
       $(".reservation-content[data-filter=" + filter + "]").show();
     }
+  });
+
+  $(".categories-title").click(function (e) {
+    $(this).siblings(".categories-list").slideToggle();
+    $(this).toggleClass("active");
   });
   /************************************ Account Nav ************************************/
   $(".accountNav-trigger").click(function (e) {
