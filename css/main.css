@@ -6711,4 +6711,116 @@ html[dir=ltr] .side-nav .nav-body a::before {
   max-height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.auth-header {
+  background-color: #F5FBFB;
+}
+.auth-header .header-tools {
+  gap: 20px;
+}
+.auth-header .auth-btn-title {
+  color: #343434;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .auth-header .auth-btn-title {
+    display: none;
+  }
+}
+.auth-header .header-btn {
+  background-color: #fff;
+  color: #37a59b;
+  box-shadow: 0px 4px 15px rgba(55, 165, 155, 0.1019607843);
+}
+.auth-header .header-btn:hover {
+  background-color: #37a59b;
+  color: #fff;
+  box-shadow: none;
+}
+@media (max-width: 767px) {
+  .auth-header .header-btn {
+    width: auto;
+    padding: 0 15px;
+  }
+  .auth-header .header-btn .text {
+    display: block;
+  }
+}
+.auth-header .header-btn.back-btn .text {
+  margin: 0;
+}
+.auth-header .header-btn.back-btn i {
+  margin-inline-start: 20px;
+}
+html[dir=ltr] .auth-header .header-btn.back-btn i::before {
+  transform: scaleX(-1);
+}
+
+.auth-body {
+  background-color: #F5FBFB;
+  min-height: calc(100vh - 149px);
+  padding: 40px 0;
+}
+.auth-body .form-content {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.auth-body .form-link {
+  font-size: 14px;
+  font-weight: 400;
+  color: #343434;
+  line-height: 1.572;
+  display: inline-flex;
+  margin-bottom: 13px;
+  transition: all 0.3s ease-in-out;
+}
+.auth-body .form-link:hover {
+  color: #37a59b;
+}
+.auth-body .submit-btn {
+  max-width: 100%;
+}
+@media (max-width: 991px) {
+  .auth-body {
+    min-height: calc(100vh - 119px);
+    padding: 40px 0 25px;
+  }
+}
+
+.auth-title {
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  color: #343434;
+  line-height: 1.667;
+  margin: 0 0 10px;
+}
+
+.auth-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #888888;
+  text-align: center;
+  line-height: 1.563;
+  margin: 0 0 33px;
+}
+
+.auth-footer {
+  background-color: #F5FBFB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+.auth-footer .copyrights {
+  font-size: 12px;
+  font-weight: 600;
+  color: #343434;
+  padding: 0;
+  margin: 0;
+  line-height: 1.584;
 }/*# sourceMappingURL=main.css.map */
