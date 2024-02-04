@@ -6277,4 +6277,118 @@ html[dir=ltr] .side-categories .categories-list a::before {
 }
 .about-description :last-child {
   margin-bottom: 0;
+}
+
+.faq-content {
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(55, 165, 155, 0.1019607843);
+  border-radius: 10px;
+  padding: 27px 30px 28px;
+}
+@media (max-width: 991px) {
+  .faq-content {
+    padding: 20px 15px;
+  }
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.faq-item:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.faq-item .faq-header {
+  padding-bottom: 11px;
+  width: 100%;
+}
+.faq-item .accordion-button {
+  display: flex;
+  align-items: flex-start;
+  font-size: 18px;
+  font-weight: 700;
+  color: #343434;
+  line-height: 1.66666667;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 991px) {
+  .faq-item .accordion-button {
+    font-size: 16px;
+  }
+}
+.faq-item .accordion-button::after, .faq-item .accordion-button:before {
+  font-family: "Font Awesome 6 pro";
+  font-weight: 400;
+  color: #c5c5c5;
+  display: flex;
+  align-items: center;
+  width: 28px;
+  height: 30px;
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 991px) {
+  .faq-item .accordion-button::after, .faq-item .accordion-button:before {
+    width: 20px;
+    height: 26.6px;
+  }
+}
+.faq-item .accordion-button::before {
+  content: "\f060";
+  font-size: 14px;
+  justify-content: flex-start;
+}
+html[dir=ltr] .faq-item .accordion-button::before {
+  content: "\f061";
+}
+@media (max-width: 991px) {
+  .faq-item .accordion-button::before {
+    font-size: 12px;
+  }
+}
+.faq-item .accordion-button::after {
+  justify-content: flex-end;
+  font-size: 18px;
+  content: "+";
+}
+@media (max-width: 991px) {
+  .faq-item .accordion-button::after {
+    font-size: 16px;
+  }
+}
+.faq-item .accordion-button:not(.collapsed) {
+  color: #37a59b;
+}
+.faq-item .accordion-button:not(.collapsed)::after, .faq-item .accordion-button:not(.collapsed):before {
+  color: #37a59b;
+}
+.faq-item .accordion-button:not(.collapsed)::after {
+  content: "\f068";
+}
+.faq-item .faq-body {
+  padding: 0 28px 21px;
+}
+@media (max-width: 991px) {
+  .faq-item .faq-body {
+    padding: 0 15px 15px;
+  }
+}
+.faq-item .faq-body p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.9375;
+  color: #343434;
+  margin: 0 0 25px;
+}
+@media (max-width: 991px) {
+  .faq-item .faq-body p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+.faq-item .faq-body :last-child {
+  margin-bottom: 0;
 }/*# sourceMappingURL=main.css.map */
