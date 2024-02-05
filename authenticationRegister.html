@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
+    <title>Tmoono | تسجيل جديد</title>
+    <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/fancybox.css" />
+    <link rel="stylesheet" href="css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/flatpicker.min.css" />
+    <link rel="stylesheet" href="css/stepper.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <header class="auth-header">
+      <div class="container-fluid">
+        <div class="header">
+          <a href="index.html" class="logo">
+            <img src="images/logoColored.svg" class="img-fluid" />
+          </a>
+          <div class="header-tools">
+            <h6 class="auth-btn-title">مسجل بالفعل في تمونوا؟</h6>
+            <a href="authenticationLogin.html" class="header-btn header-link">
+              <i class="fa-regular fa-user"></i>
+              <span class="text"> دخول </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Page Content -->
+    <section class="auth-body">
+      <div class="container">
+        <h1 class="auth-title">تسجيل جديد</h1>
+        <h3 class="auth-subtitle">
+          انضم الآن واحجز موعد استشارة طبيب او مختبر تحاليل بسهولة
+        </h3>
+        <div id="registerForm" class="bs-stepper">
+          <div class="steps-header" role="tablist">
+            <div class="step" data-target="#step-1">
+              <button
+                type="button"
+                class="step-trigger"
+                role="tab"
+                aria-controls="step-1"
+              >
+                <span> 1 </span>
+                البيانات الأساسية
+              </button>
+            </div>
+            <div class="step" data-target="#step-2">
+              <button
+                type="button"
+                class="step-trigger"
+                role="tab"
+                aria-controls="step-2"
+              >
+                <span> 2 </span>
+                التحقق
+              </button>
+            </div>
+            <div class="step" data-target="#step-3">
+              <button
+                type="button"
+                class="step-trigger"
+                role="tab"
+                aria-controls="step-3"
+              >
+                <span> 3 </span>
+                بيانات الحساب
+              </button>
+            </div>
+            <div class="step" data-target="#step-4">
+              <button
+                type="button"
+                class="step-trigger"
+                role="tab"
+                aria-controls="step-4"
+              >
+                <span> 4 </span>
+                البيانات الصحية
+              </button>
+            </div>
+          </div>
+          <div class="bs-stepper-content">
+            <form>
+              <div id="step-1" role="tabpanel" class="bs-stepper-pane fade">
+                <div class="form-content">
+                  <div class="form-group">
+                    <label class="form-label"> رقم الجوال </label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="5xxxxxxxx"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> كلمة المرور </label>
+                    <div class="password-content">
+                      <button class="password-toggle">
+                        <i class="fa-regular fa-eye"></i>
+                      </button>
+                      <input type="password" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> تأكيد كلمة المرور </label>
+                    <div class="password-content">
+                      <button class="password-toggle">
+                        <i class="fa-regular fa-eye"></i>
+                      </button>
+                      <input type="password" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" checked />
+                        <span class="mark">
+                          <i class="fa-regular fa-check"></i>
+                        </span>
+                        <span class="text">
+                          الموافقة على <a href="terms.html">الشروط والأحكام</a>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    class="submit-btn main-btn"
+                    onclick="registerForm.next()"
+                  >
+                    متابعة
+                  </button>
+                </div>
+              </div>
+              <div id="step-2" role="tabpanel" class="bs-stepper-pane fade">
+                <div class="otp-content">
+                  <div id="otp-input" class="otp-input">
+                    <input
+                      type="number"
+                      step="1"
+                      min="0"
+                      max="9"
+                      autocomplete="no"
+                      pattern="\d*"
+                    />
+                    <input
+                      type="number"
+                      step="1"
+                      min="0"
+                      max="9"
+                      autocomplete="no"
+                      pattern="\d*"
+                      disabled
+                    />
+                    <input
+                      type="number"
+                      step="1"
+                      min="0"
+                      max="9"
+                      autocomplete="no"
+                      pattern="\d*"
+                      disabled
+                    />
+                    <input
+                      type="number"
+                      step="1"
+                      min="0"
+                      max="9"
+                      autocomplete="no"
+                      pattern="\d*"
+                      disabled
+                    />
+                  </div>
+                  <input type="hidden" name="otp" />
+                  <button
+                    type="button"
+                    class="submit-btn main-btn"
+                    onclick="registerForm.next()"
+                    disabled
+                  >
+                    متابعة
+                  </button>
+                </div>
+              </div>
+              <div id="step-3" role="tabpanel" class="bs-stepper-pane fade">
+                <div class="form-content">
+                  <div class="form-group">
+                    <label class="form-label"> الاسم الأول </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> اسم العائلة </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> البريد الإلكتروني </label>
+                    <input type="email" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> الجنس </label>
+                    <div class="radios">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="gender" />
+                          <span class="mark"> </span>
+                          <span class="text"> ذكر </span>
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="gender" />
+                          <span class="mark"> </span>
+                          <span class="text"> انثى </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> تاريخ الميلاد </label>
+                    <div class="date-content" data-placeholder="YYYY/MM/DD">
+                      <input
+                        type="date"
+                        placeholder="YYYY/MM/DD"
+                        class="form-control"
+                      />
+                      <span class="date-icon">
+                        <i class="fa-regular fa-calendar"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> المنطقة </label>
+                    <select class="form-control">
+                      <option value="1">الرياض</option>
+                      <option value="2">جدة</option>
+                      <option value="3">مكة</option>
+                      <option value="4" selected>المدينة المنورة</option>
+                      <option value="5">الدمام</option>
+                      <option value="6">تبوك</option>
+                      <option value="7">بريدة</option>
+                      <option value="8">الطائف</option>
+                      <option value="9">حائل</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> المدينة </label>
+                    <select class="form-control">
+                      <option value="1">المدينة 1</option>
+                      <option value="2">المدينة 2</option>
+                      <option value="3">المدينة 3</option>
+                      <option value="4" selected>ينبع</option>
+                      <option value="5">المدينة 5</option>
+                      <option value="6">المدينة 6</option>
+                      <option value="7">المدينة 7</option>
+                      <option value="8">المدينة 8</option>
+                      <option value="9">المدينة 9</option>
+                    </select>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="submit-btn main-btn"
+                    onclick="registerForm.next()"
+                  >
+                    متابعة
+                  </button>
+                </div>
+              </div>
+              <div id="step-4" role="tabpanel" class="bs-stepper-pane fade">
+                <div class="reg-tabs-content">
+                  <div class="nav account-tabs">
+                    <button
+                      type="button"
+                      class="active"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tab-1"
+                    >
+                      البيانات الأساسية
+                    </button>
+                    <button
+                      type="button"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tab-2"
+                    >
+                      الأمراض المزمنة
+                    </button>
+                    <button
+                      type="button"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tab-3"
+                    >
+                      التحاليل المرفقة
+                    </button>
+                  </div>
+
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tab-1">
+                      <div class="account-tab">
+                        <div class="form-grid-2">
+                          <div class="form-group">
+                            <label class="form-label"> الطول </label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-label"> فصيلة الدم </label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-label"> السكر </label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <div class="form-group">
+                            <label class="form-label"> معدل ضغط الدم </label>
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="tab-buttons">
+                          <button
+                            type="button"
+                            class="submit-btn main-btn btnNext"
+                          >
+                            متابعة
+                          </button>
+                          <a
+                            href="authenticationRegisterSuccess.html"
+                            class="submit-btn main-btn finish-btn"
+                          >
+                            استكمال لاحقًا
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-2">
+                      <div class="account-tab">
+                        <div class="checkboxes">
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text"> التهاب المفاصل </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text"> مشاكل صحة الفم </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text"> أمراض الجهاز الهضمي </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text">
+                                  أمراض القلب و الأوعية الدموية
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text">
+                                  مرض الكلى المزمن (الفشل الكلوي)
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text"> ارتفاع الدهنيات </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text"> أمراض الجهاز التنفسي </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text">
+                                  الجلوكوما (زرق العينين)
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text"> مرض سيولة الدم </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text"> السرطان </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text"> قصور الغدة الدرقية </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text"> السمنة </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text"> السكري </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text"> التصلب اللويحي </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text">
+                                  انفصام الشخصية (الفصام)
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text"> الصرع والنوبات </span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" />
+                                <span class="mark">
+                                  <i class="fa-regular fa-check"></i>
+                                </span>
+                                <span class="text"> مرض باركنسون </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-buttons">
+                          <button
+                            type="button"
+                            class="submit-btn main-btn btnNext"
+                          >
+                            متابعة
+                          </button>
+                          <a
+                            href="authenticationRegisterSuccess.html"
+                            class="submit-btn main-btn finish-btn"
+                          >
+                            استكمال لاحقًا
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-3">
+                      <div class="account-tab">
+                        <div class="form-group">
+                          <label class="file-content">
+                            <input type="file" onchange="uploadFile(this)" />
+                            <div class="file-placeholder">
+                              <div class="placeholder-icon">
+                                <img
+                                  src="images/icons/upload.svg"
+                                  class="svg"
+                                />
+                              </div>
+                              <h5 class="placeholder-text">
+                                يمكنك سحب أي ملف هنا أو <span>تحميل ملف</span>
+                              </h5>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="files-list"></div>
+                        <div class="tab-buttons">
+                          <a
+                            href="authenticationRegisterSuccess.html"
+                            class="submit-btn main-btn"
+                          >
+                            تسجيل
+                          </a>
+                          <a
+                            href="authenticationRegisterSuccess.html"
+                            class="submit-btn main-btn finish-btn"
+                          >
+                            استكمال لاحقًا
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Page Content -->
+
+    <!-- Start Footer -->
+    <footer class="auth-footer">
+      <p class="copyrights">تمونوا 2024 ©</p>
+    </footer>
+    <!-- End Footer -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/flatpicker.min.js"></script>
+    <script src="js/ar.js"></script>
+    <script src="js/stepper.min.js"></script>
+    <script src="js/lazyload.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/svg.js"></script>
+
+    <script>
+      function uploadFile(input) {
+        var fileName = input.files[0].name;
+        var today = new Date();
+        var date =
+          today.getFullYear() +
+          "/" +
+          (today.getMonth() + 1) +
+          "/" +
+          today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes();
+        var ele = `<div class="file-item">
+    <div class="file-info">
+      <h5 class="file-name">
+        <a href="#!" download>
+          ${fileName}
+        </a>
+      </h5>
+      <span class="file-date">
+        تاريخ الإنشاء: ${date} - ${time}
+      </span>
+    </div>
+    <div class="file-tools">
+      <a href="#!" download class="file-btn">
+        <i class="fa-light fa-download"></i>
+      </a>
+      <button
+        type="button"
+        class="file-btn"
+        onclick="$(this).parents('.file-item').remove()"
+      >
+        <i class="fa-light fa-trash-can"></i>
+      </button>
+    </div>
+  </div>`;
+        $(".files-list").append(ele);
+      }
+    </script>
+  </body>
+</html>
