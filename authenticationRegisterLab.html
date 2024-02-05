@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
+    <title>Tmoono | اشترك معنا كمختبر تحليل</title>
+    <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/fancybox.css" />
+    <link rel="stylesheet" href="css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/flatpicker.min.css" />
+    <link rel="stylesheet" href="css/stepper.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <header class="auth-header">
+      <div class="container-fluid">
+        <div class="header">
+          <a href="index.html" class="logo">
+            <img src="images/logoColored.svg" class="img-fluid" />
+          </a>
+          <div class="header-tools">
+            <h6 class="auth-btn-title">مسجل بالفعل في تمونوا؟</h6>
+            <a href="authenticationLogin.html" class="header-btn header-link">
+              <i class="fa-regular fa-user"></i>
+              <span class="text"> دخول </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Page Content -->
+    <section class="auth-body">
+      <div class="container">
+        <h1 class="auth-title">تسجيل كمختبر تحليل</h1>
+        <h3 class="auth-subtitle">انضم الآن واشترك معنا كمختبر تحليل</h3>
+        <div id="registerForm" class="bs-stepper">
+          <div class="steps-header" role="tablist">
+            <div class="step" data-target="#step-1">
+              <button
+                type="button"
+                class="step-trigger"
+                role="tab"
+                aria-controls="step-1"
+              >
+                <span> 1 </span>
+                البيانات الأساسية
+              </button>
+            </div>
+            <div class="step" data-target="#step-2">
+              <button
+                type="button"
+                class="step-trigger"
+                role="tab"
+                aria-controls="step-2"
+              >
+                <span> 2 </span>
+                التحقق
+              </button>
+            </div>
+            <div class="step" data-target="#step-3">
+              <button
+                type="button"
+                class="step-trigger"
+                role="tab"
+                aria-controls="step-3"
+              >
+                <span> 3 </span>
+                بيانات المختبر
+              </button>
+            </div>
+          </div>
+          <div class="bs-stepper-content">
+            <form>
+              <div id="step-1" role="tabpanel" class="bs-stepper-pane fade">
+                <div class="form-content">
+                  <div class="form-group">
+                    <label class="form-label"> الاسم بالكامل </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> البريد الإلكتروني </label>
+                    <input type="email" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> رقم الجوال </label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="5xxxxxxxx"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> الجنس </label>
+                    <div class="radios">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="gender" />
+                          <span class="mark"> </span>
+                          <span class="text"> ذكر </span>
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="gender" />
+                          <span class="mark"> </span>
+                          <span class="text"> انثى </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> كلمة المرور </label>
+                    <div class="password-content">
+                      <button class="password-toggle">
+                        <i class="fa-regular fa-eye"></i>
+                      </button>
+                      <input type="password" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> تأكيد كلمة المرور </label>
+                    <div class="password-content">
+                      <button class="password-toggle">
+                        <i class="fa-regular fa-eye"></i>
+                      </button>
+                      <input type="password" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" checked />
+                        <span class="mark">
+                          <i class="fa-regular fa-check"></i>
+                        </span>
+                        <span class="text">
+                          الموافقة على <a href="terms.html">الشروط والأحكام</a>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    class="submit-btn main-btn"
+                    onclick="registerForm.next()"
+                  >
+                    متابعة
+                  </button>
+                </div>
+              </div>
+              <div id="step-2" role="tabpanel" class="bs-stepper-pane fade">
+                <div class="otp-content">
+                  <div id="otp-input" class="otp-input">
+                    <input
+                      type="number"
+                      step="1"
+                      min="0"
+                      max="9"
+                      autocomplete="no"
+                      pattern="\d*"
+                    />
+                    <input
+                      type="number"
+                      step="1"
+                      min="0"
+                      max="9"
+                      autocomplete="no"
+                      pattern="\d*"
+                      disabled
+                    />
+                    <input
+                      type="number"
+                      step="1"
+                      min="0"
+                      max="9"
+                      autocomplete="no"
+                      pattern="\d*"
+                      disabled
+                    />
+                    <input
+                      type="number"
+                      step="1"
+                      min="0"
+                      max="9"
+                      autocomplete="no"
+                      pattern="\d*"
+                      disabled
+                    />
+                  </div>
+                  <input type="hidden" name="otp" />
+                  <button
+                    type="button"
+                    class="submit-btn main-btn"
+                    onclick="registerForm.next()"
+                    disabled
+                  >
+                    متابعة
+                  </button>
+                </div>
+              </div>
+              <div id="step-3" role="tabpanel" class="bs-stepper-pane fade">
+                <div class="form-content">
+                  <div class="form-group">
+                    <label class="form-label"> اسم الطبيب المسئول </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> رقم الترخيص </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> صورة الترخيص </label>
+                    <div class="upload-content">
+                      <label class="form-control">
+                        <input type="file" accept="image/*" />
+                        <span class="preview"></span>
+                        <span class="upload-text"> اضافة ملف </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> الرقم الضريبي </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> اسم المختبر </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> ارفاق الشعار </label>
+                    <div class="upload-content">
+                      <label class="form-control">
+                        <input type="file" accept="image/*" />
+                        <span class="preview"></span>
+                        <span class="upload-text"> اضافة ملف </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> صور المختبر </label>
+                    <div class="form-group">
+                      <label class="file-content">
+                        <input
+                          type="file"
+                          onchange="uploadFile(this)"
+                          accept="image/*"
+                        />
+                        <div class="file-placeholder">
+                          <div class="placeholder-icon">
+                            <img src="images/icons/upload.svg" class="svg" />
+                          </div>
+                          <h5 class="placeholder-text">
+                            يمكنك سحب أي ملف هنا أو <span>تحميل ملف</span>
+                          </h5>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="files-list"></div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> نبذة عن المختبر </label>
+                    <textarea class="form-control"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> الدولة </label>
+                    <select class="form-control">
+                      <option value="1">الدولة 1</option>
+                      <option value="2">الدولة 2</option>
+                      <option value="3">الدولة 3</option>
+                      <option value="4">الدولة 4</option>
+                      <option value="5">الدولة 5</option>
+                      <option value="6">الدولة 6</option>
+                      <option value="7">الدولة 7</option>
+                      <option value="8">الدولة 8</option>
+                      <option value="9">الدولة 9</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> المنطقة </label>
+                    <select class="form-control">
+                      <option value="1">الرياض</option>
+                      <option value="2">جدة</option>
+                      <option value="3">مكة</option>
+                      <option value="4">المدينة المنورة</option>
+                      <option value="5">الدمام</option>
+                      <option value="6">تبوك</option>
+                      <option value="7">بريدة</option>
+                      <option value="8">الطائف</option>
+                      <option value="9">حائل</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label"> المدينة </label>
+                    <select class="form-control">
+                      <option value="1">المدينة 1</option>
+                      <option value="2">المدينة 2</option>
+                      <option value="3">المدينة 3</option>
+                      <option value="4">ينبع</option>
+                      <option value="5">المدينة 5</option>
+                      <option value="6">المدينة 6</option>
+                      <option value="7">المدينة 7</option>
+                      <option value="8">المدينة 8</option>
+                      <option value="9">المدينة 9</option>
+                    </select>
+                  </div>
+                  <a
+                    href="authenticationRegisterPartenerSuccess.html"
+                    class="submit-btn main-btn"
+                  >
+                    تسجيل
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Page Content -->
+
+    <!-- Start Footer -->
+    <footer class="auth-footer">
+      <p class="copyrights">تمونوا 2024 ©</p>
+    </footer>
+    <!-- End Footer -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/flatpicker.min.js"></script>
+    <script src="js/ar.js"></script>
+    <script src="js/stepper.min.js"></script>
+    <script src="js/lazyload.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/svg.js"></script>
+
+    <script>
+      function uploadFile(input) {
+        var fileName = input.files[0].name;
+        var today = new Date();
+        var date =
+          today.getFullYear() +
+          "/" +
+          (today.getMonth() + 1) +
+          "/" +
+          today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes();
+        var ele = `<div class="file-item">
+    <div class="file-info">
+      <h5 class="file-name">
+        <a href="#!" download>
+          ${fileName}
+        </a>
+      </h5>
+      <span class="file-date">
+        تاريخ الإنشاء: ${date} - ${time}
+      </span>
+    </div>
+    <div class="file-tools">
+      <a href="#!" download class="file-btn">
+        <i class="fa-light fa-download"></i>
+      </a>
+      <button
+        type="button"
+        class="file-btn"
+        onclick="$(this).parents('.file-item').remove()"
+      >
+        <i class="fa-light fa-trash-can"></i>
+      </button>
+    </div>
+  </div>`;
+        $(".files-list").append(ele);
+      }
+    </script>
+  </body>
+</html>

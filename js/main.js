@@ -270,7 +270,16 @@ $(document).ready(function () {
       minimumResultsForSearch: Infinity,
     });
   }
-
+  //file input
+  $(".upload-content input[type=file]").change(function () {
+    let file_val;
+    if ($(this).val() == "") {
+      file_val = "";
+    } else {
+      file_val = $(this).prop("files")[0].name;
+    }
+    $(this).next().html(file_val);
+  });
   var input = $("input[type=tel]");
   for (let i = 0; i < input.length; i++) {
     intlTelInput(input[i], {
@@ -302,12 +311,42 @@ $(document).ready(function () {
     dateFormat: "d/m/Y",
   });
 
-  // form Wizard
+  $(".add-input").click(function () {
+    var first_input = $(this).parents(".form-group").find("input")[0];
+    var sec_input = $(this).parents(".form-group").find("input")[1];
+    var ele = `
+<div class="form-grid-2">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="${first_input.placeholder}"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="${sec_input.placeholder}"
+                        />
+                      </div>
+                    </div>
+`;
+    $(ele).insertBefore(this);
+  });
+
+  /************************************ form Wizard ************************************/
   window.registerForm = new Stepper(document.querySelector("#registerForm"), {
     linear: false,
     animation: true,
   });
+  $(".btnNext").click(function () {
+    const nextTabLinkEl = $(".account-tabs .active").next("button")[0];
+    const nextTab = new bootstrap.Tab(nextTabLinkEl);
+    nextTab.show();
+  });
 
+  /************************************ OTP ************************************/
   const inputs = $("#otp-input input");
 
   inputs.on("input", function () {
@@ -410,10 +449,4 @@ $(document).ready(function () {
     }, "");
     $("input[name=otp]").val(inputValue);
   }
-
-  $(".btnNext").click(function () {
-    const nextTabLinkEl = $(".account-tabs .active").next("button")[0];
-    const nextTab = new bootstrap.Tab(nextTabLinkEl);
-    nextTab.show();
-  });
 });

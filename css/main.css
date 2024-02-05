@@ -618,6 +618,9 @@ html[dir=ltr] select {
     gap: unset;
   }
 }
+.form-group .form-grid-2 {
+  gap: 0 10px;
+}
 
 .form-group {
   margin: 0 0 15px;
@@ -634,6 +637,9 @@ html[dir=ltr] select {
 }
 .form-group:has(:disabled) {
   opacity: 0.5;
+}
+.form-group .form-group {
+  width: 100%;
 }
 
 .radios,
@@ -1065,6 +1071,34 @@ html[dir=ltr] .date-content .form-control {
 }
 .form-content .date-content {
   width: 100%;
+}
+
+.upload-content {
+  width: 100%;
+}
+.upload-content .form-control {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.upload-content .upload-text {
+  position: absolute;
+  top: 7px;
+  bottom: 7px;
+  inset-inline-end: 7px;
+  background-color: #37a59b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+.upload-content input {
+  display: none;
 }
 
 /* select */
@@ -7057,4 +7091,16 @@ html[dir=ltr] .auth-header .header-btn.back-btn i::before {
 .reg-tabs-content .tab-buttons .finish-btn:hover {
   background-color: #fff;
   border-color: #37a59b;
+}
+
+.add-input {
+  width: 100%;
+  background-color: #E2F2F1;
+  border: none;
+  height: 40px;
+  color: #37a59b;
+}
+.add-input:hover {
+  background-color: #37a59b;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */
