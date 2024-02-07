@@ -336,10 +336,12 @@ $(document).ready(function () {
   });
 
   /************************************ form Wizard ************************************/
-  window.registerForm = new Stepper(document.querySelector("#registerForm"), {
-    linear: false,
-    animation: true,
-  });
+  if ($("#registerForm").length > 0) {
+    window.registerForm = new Stepper(document.querySelector("#registerForm"), {
+      linear: false,
+      animation: true,
+    });
+  }
   $(".btnNext").click(function () {
     const nextTabLinkEl = $(".account-tabs .active").next("button")[0];
     const nextTab = new bootstrap.Tab(nextTabLinkEl);
