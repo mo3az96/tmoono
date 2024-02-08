@@ -82,6 +82,9 @@ body::-webkit-scrollbar-thumb {
   background-color: #37a59b;
   border-radius: 3px;
 }
+html[dir=ltr] body {
+  text-transform: capitalize;
+}
 
 .overflow {
   overflow: hidden;
@@ -717,6 +720,7 @@ html[dir=ltr] select {
   color: #343434;
   direction: rtl;
   resize: none;
+  text-transform: none;
   transition: all 0.3s ease-in-out;
 }
 html[dir=ltr] .form-control {
@@ -1859,8 +1863,13 @@ html[dir=rtl] .flatpickr-current-month {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(270deg, #37a59b 0%, rgba(55, 165, 155, 0) 100%);
   z-index: 1;
+}
+html[dir=rtl] .banner-content::after {
+  background-image: linear-gradient(270deg, #37a59b 0%, rgba(55, 165, 155, 0) 100%);
+}
+html[dir=ltr] .banner-content::after {
+  background-image: linear-gradient(270deg, rgba(55, 165, 155, 0) 0%, #37a59b 100%);
 }
 .banner-content .banner-information {
   position: relative;
@@ -2296,6 +2305,11 @@ html[dir=rtl] .flatpickr-current-month {
   color: #fff;
   background-color: #52cbc0;
   border-color: #52cbc0;
+}
+@media (max-width: 767px) {
+  .lab-item .lab-btn {
+    padding: 0 20px;
+  }
 }
 .lab-item .lab-wishlist {
   width: 30px;
@@ -3327,6 +3341,7 @@ html[dir=ltr] .footer-list a:hover {
   font-size: 13px;
   font-weight: 300;
   line-height: 1.616;
+  text-transform: none;
   transition: all 0.3s ease-in-out;
 }
 .contacts-list a i {
@@ -4812,6 +4827,30 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 }
 .success-header .header {
   justify-content: center;
+}
+@media (max-width: 1199px) {
+  .success-header .header {
+    justify-content: center;
+  }
+  .success-header .header .logo {
+    margin: auto;
+  }
+}
+@media (max-width: 991px) {
+  .success-header .header {
+    justify-content: center;
+  }
+  .success-header .header .logo {
+    margin: auto;
+  }
+}
+@media (max-width: 767px) {
+  .success-header .header {
+    justify-content: center;
+  }
+  .success-header .header .logo {
+    margin: auto;
+  }
 }
 
 .success-body {
