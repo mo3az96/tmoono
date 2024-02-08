@@ -62,6 +62,8 @@
   font-display: swap;
 }
 html {
+  scrollbar-width: thin;
+  scrollbar-color: #37a59b #f1f1f1;
   scroll-behavior: unset !important;
 }
 
@@ -72,13 +74,13 @@ body {
   background-color: #F5FBFB;
 }
 body::-webkit-scrollbar {
-  background-color: #F5FBFB;
-  width: 8px;
-  height: 4px;
+  background-color: #f1f1f1;
+  width: 4px;
+  border-radius: 3px;
 }
 body::-webkit-scrollbar-thumb {
   background-color: #37a59b;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 .overflow {
@@ -287,6 +289,7 @@ html[dir=ltr] select {
   border: none;
   padding: 40px 15px 30px;
   position: relative;
+  max-height: 600px;
 }
 @media (max-width: 767px) {
   .modal .modal-content {
@@ -309,8 +312,8 @@ html[dir=ltr] select {
 }
 .modal .modal-close {
   position: absolute;
-  top: 20px;
-  inset-inline-end: 20px;
+  top: 10px;
+  inset-inline-end: 10px;
   font-size: 22px;
   color: #cfcfcf;
   display: flex;
@@ -322,21 +325,24 @@ html[dir=ltr] select {
   color: #37a59b;
 }
 .modal .modal-body {
-  padding: 19px 15px 20px;
+  padding: 19px 15px 10px;
+  margin-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #37a59b #f1f1f1;
 }
 @media (max-width: 767px) {
   .modal .modal-body {
-    padding: 15px 5px;
+    padding: 15px 5px 5px;
   }
 }
 .modal .modal-body::-webkit-scrollbar {
-  background-color: #cfcfcf;
-  width: 8px;
-  border-radius: 4px;
+  background-color: #f1f1f1;
+  width: 4px;
+  border-radius: 3px;
 }
 .modal .modal-body::-webkit-scrollbar-thumb {
-  background-color: #E2F2F1;
-  border-radius: 4px;
+  background-color: #37a59b;
+  border-radius: 3px;
 }
 .modal .modal-footer {
   display: flex;
@@ -483,6 +489,8 @@ html[dir=ltr] select {
   padding-inline-end: 5px;
   overflow-x: auto;
   max-height: 160px;
+  scrollbar-width: thin;
+  scrollbar-color: #37a59b #f1f1f1;
 }
 .modal .time-list::-webkit-scrollbar {
   background-color: #f1f1f1;
@@ -552,8 +560,9 @@ html[dir=ltr] select {
   transition: all 0.3s ease-in-out;
 }
 .main-btn:hover {
-  color: #37a59b;
-  background-color: transparent;
+  color: #fff;
+  background-color: #52cbc0;
+  border-color: #52cbc0;
 }
 .main-btn:disabled {
   opacity: 0.5;
@@ -587,11 +596,11 @@ html[dir=ltr] select {
 .submit-btn {
   width: 100%;
   max-width: 200px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 @media (max-width: 767px) {
   .submit-btn {
-    margin: 5px auto 0;
+    margin: 10px auto 0;
   }
 }
 
@@ -623,7 +632,7 @@ html[dir=ltr] select {
 }
 
 .form-group {
-  margin: 0 0 15px;
+  margin: 0 0 18px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -786,7 +795,6 @@ html[dir=ltr] .form-control {
   z-index: 2;
 }
 .checkbox label input:checked ~ .mark {
-  border-color: #37a59b;
   box-shadow: 0px 4px 15px rgba(55, 165, 155, 0.1019607843);
 }
 .checkbox label input:checked ~ .mark i {
@@ -1153,7 +1161,99 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
   right: auto;
   left: auto;
 }
-.select2-container.select2-container--open.select2-container--below .select2-selection--single, .select2-container.select2-container--open.select2-container--above .select2-selection--single {
+.select2-container .select2-selection--multiple {
+  padding: 10px 16px;
+  border: 2px solid #fff !important;
+  background-color: #fff;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  background-color: #ebf8f7;
+  border: none;
+  color: #37a59b;
+  font-weight: 600;
+  font-size: 12px;
+  height: 24px;
+  border-radius: 12px;
+  padding: 0 10px;
+  transition: all 0.3s ease-in-out;
+  margin: 0;
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered .select2-selection__choice span {
+  padding: 0;
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered .select2-selection__choice button {
+  position: relative;
+  background-color: transparent;
+  padding: 0;
+  color: #fa404f;
+  opacity: 1;
+  font-size: 10px;
+  margin-right: 5px;
+}
+html[dir=rtl] .select2-container .select2-selection--multiple .select2-selection__rendered .select2-selection__choice button {
+  border: none;
+  inset: unset;
+}
+html[dir=ltr] .select2-container .select2-selection--multiple .select2-selection__rendered .select2-selection__choice button {
+  border: none;
+  inset: unset;
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered .select2-selection__choice button span {
+  display: none;
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered .select2-selection__choice button:before {
+  content: "\f00d";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 400;
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered .select2-selection__choice button:hover {
+  color: #f00;
+}
+html[dir=rtl] .select2-container .select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
+  margin: 0;
+}
+html[dir=ltr] .select2-container .select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
+  margin: 0;
+}
+.select2-container .select2-selection--multiple .select2-search {
+  display: none;
+}
+.select2-container .select2-selection--multiple::after {
+  content: "\f078";
+  font-family: "Font Awesome 6 pro";
+  font-weight: 400;
+  font-size: 8px;
+  color: #343434;
+  position: absolute;
+  inset-inline-end: 16px;
+  top: 0;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.select2-container.select2-container--open.select2-container--below .select2-selection--single,
+.select2-container.select2-container--open.select2-container--below .select2-selection--multiple, .select2-container.select2-container--open.select2-container--above .select2-selection--single,
+.select2-container.select2-container--open.select2-container--above .select2-selection--multiple {
   border: 2px solid #fff;
   background-color: #fff;
   border-radius: 24px;
@@ -1207,6 +1307,13 @@ html[dir=ltr] .select2-container .select2-selection--single .select2-selection__
 }
 .select2-container .select2-results__option.select2-results__option--highlighted.select2-results__option--selectable {
   background-color: transparent;
+  color: #37a59b;
+}
+.select2-container .select2-results__option.select2-results__option--selected::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 400;
+  margin-inline-start: 10px;
   color: #37a59b;
 }
 
@@ -1390,16 +1497,16 @@ html[dir=rtl] .flatpickr-current-month {
   padding-inline-end: 2px;
   overflow-x: auto;
   scrollbar-width: thin;
-  scrollbar-color: #E2F2F1 #cfcfcf;
+  scrollbar-color: #37a59b #f1f1f1;
 }
 .account-tabs::-webkit-scrollbar {
-  background-color: #cfcfcf;
+  background-color: #f1f1f1;
   height: 4px;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 .account-tabs::-webkit-scrollbar-thumb {
-  background-color: #E2F2F1;
-  border-radius: 4px;
+  background-color: #37a59b;
+  border-radius: 3px;
 }
 @media (max-width: 767px) {
   .account-tabs {
@@ -1670,7 +1777,6 @@ html[dir=rtl] .flatpickr-current-month {
 
 .specialty-item {
   width: 100%;
-  max-width: 110px;
   margin: 0 auto;
 }
 .specialty-item .specialty-img {
@@ -1720,7 +1826,6 @@ html[dir=rtl] .flatpickr-current-month {
 .banner-content {
   padding: 55px 50px 54px;
   position: relative;
-  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -1903,6 +2008,7 @@ html[dir=rtl] .flatpickr-current-month {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 3px;
   font-size: 12px;
   color: #e0e0e0;
   margin-bottom: 10px;
@@ -1933,6 +2039,13 @@ html[dir=rtl] .flatpickr-current-month {
   color: #696969;
   line-height: 1.539;
   margin: 0 0 10px;
+}
+.doctor-item .doctor-summary a {
+  color: inherit;
+  transition: all 0.3s ease-in-out;
+}
+.doctor-item .doctor-summary a:hover {
+  color: #37a59b;
 }
 .doctor-item .doctor-tags {
   display: flex;
@@ -1984,8 +2097,9 @@ html[dir=rtl] .flatpickr-current-month {
   margin-inline-end: 7px;
 }
 .doctor-item .doctor-btn:hover {
-  background-color: transparent;
-  color: #37a59b;
+  color: #fff;
+  background-color: #52cbc0;
+  border-color: #52cbc0;
 }
 .doctor-item .doctor-hint {
   margin-inline-start: 20px;
@@ -2109,6 +2223,7 @@ html[dir=rtl] .flatpickr-current-month {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 3px;
   font-size: 12px;
   color: #e0e0e0;
   margin-bottom: 10px;
@@ -2173,8 +2288,9 @@ html[dir=rtl] .flatpickr-current-month {
   margin-inline-end: 7px;
 }
 .lab-item .lab-btn:hover {
-  background-color: transparent;
-  color: #37a59b;
+  color: #fff;
+  background-color: #52cbc0;
+  border-color: #52cbc0;
 }
 .lab-item .lab-wishlist {
   width: 30px;
@@ -2604,7 +2720,7 @@ header {
   z-index: 10;
   background-color: #fff;
   border-radius: 0;
-  box-shadow: 0px 4px 15px #e1e1e1;
+  box-shadow: 0px 4px 15px rgba(55, 165, 155, 0.1019607843);
   padding: 10px;
   visibility: hidden;
   opacity: 0;
@@ -2698,12 +2814,12 @@ header {
 
 .city-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 5px 10px;
 }
 @media (max-width: 767px) {
   .city-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 .city-grid .city-item {
@@ -2714,7 +2830,7 @@ header {
   width: 100%;
   border-radius: 5px;
   border: 2px solid #e1e1e1;
-  min-height: 32px;
+  min-height: 36px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -2722,9 +2838,9 @@ header {
   cursor: pointer;
   margin: 0;
   color: #343434;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 1.57142857;
+  line-height: 1.5;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -3310,9 +3426,9 @@ html[dir=ltr] .contacts-list a:hover {
 
 .specialties-grid {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   align-items: start;
-  gap: 30px 15px;
+  gap: 30px;
 }
 @media (max-width: 1199px) {
   .specialties-grid {
@@ -3340,7 +3456,7 @@ html[dir=ltr] .contacts-list a:hover {
   width: 100%;
   overflow-x: auto;
   scrollbar-width: thin;
-  scrollbar-color: #E2F2F1 #cfcfcf;
+  scrollbar-color: #37a59b #f1f1f1;
   margin-bottom: 40px;
 }
 @media (max-width: 991px) {
@@ -3349,13 +3465,13 @@ html[dir=ltr] .contacts-list a:hover {
   }
 }
 .subspecialties-filters::-webkit-scrollbar {
-  background-color: #cfcfcf;
+  background-color: #f1f1f1;
   height: 4px;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 .subspecialties-filters::-webkit-scrollbar-thumb {
-  background-color: #E2F2F1;
-  border-radius: 4px;
+  background-color: #37a59b;
+  border-radius: 3px;
 }
 
 .subspecialties-list {
@@ -3552,6 +3668,8 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   display: none;
   max-height: 155px;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #37a59b #f1f1f1;
 }
 .filter-item .filter-values::-webkit-scrollbar {
   background-color: #f1f1f1;
@@ -3959,8 +4077,9 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   justify-content: center;
 }
 .main-information .single-btn:hover {
-  background-color: #37a59b;
   color: #fff;
+  background-color: #52cbc0;
+  border-color: #52cbc0;
 }
 
 .card-head {
@@ -4009,6 +4128,8 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   gap: 10px;
   overflow-y: auto;
   padding-inline-end: 2px;
+  scrollbar-width: thin;
+  scrollbar-color: #37a59b #f1f1f1;
 }
 .services-list::-webkit-scrollbar {
   background-color: #f1f1f1;
@@ -4328,6 +4449,8 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   padding-inline-end: 5px;
   overflow-x: auto;
   max-height: 191px;
+  scrollbar-width: thin;
+  scrollbar-color: #37a59b #f1f1f1;
 }
 .side-card .time-list::-webkit-scrollbar {
   background-color: #f1f1f1;
@@ -4388,6 +4511,14 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 }
 .side-card .select-payment {
   margin-bottom: 20px;
+}
+:has(.doctor-card) .side-card .select-payment {
+  margin-bottom: 77px;
+}
+@media (max-width: 991px) {
+  :has(.doctor-card) .side-card .select-payment {
+    margin-bottom: 20px;
+  }
 }
 .side-card .payment-list {
   display: grid;
@@ -4454,6 +4585,10 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   color: #37a59b;
   font-weight: 700;
 }
+.side-card .side-total:has(.hint) {
+  font-size: 16px;
+  font-weight: 700;
+}
 .side-card .side-total .hint {
   width: 100%;
   line-height: 1.583333334;
@@ -4487,8 +4622,9 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   margin-inline-end: 7px;
 }
 .side-card .single-btn:hover {
-  background-color: transparent;
-  color: #37a59b;
+  color: #fff;
+  background-color: #52cbc0;
+  border-color: #52cbc0;
 }
 
 .selected-services {
@@ -4507,6 +4643,8 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   padding-inline-end: 5px;
   overflow-x: auto;
   max-height: 223px;
+  scrollbar-width: thin;
+  scrollbar-color: #37a59b #f1f1f1;
 }
 .checkout-page .selected-services .selected-list {
   max-height: none;
@@ -4549,6 +4687,18 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   font-size: 11px;
   color: #e24a56;
   margin-top: 3px;
+}
+
+.related-content {
+  padding-top: 70px;
+}
+.related-content .section-head {
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .related-content {
+    padding: 50px;
+  }
 }
 
 .success-content {
@@ -5170,8 +5320,9 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   margin-inline-end: 8px;
 }
 .reservation-head .reservation-btn:hover {
-  background-color: transparent;
-  color: #37a59b;
+  color: #fff;
+  background-color: #52cbc0;
+  border-color: #52cbc0;
 }
 .reservation-head .reservation-btn.book-btn {
   background-color: #E2F2F1;
@@ -5179,18 +5330,18 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   color: #37a59b;
 }
 .reservation-head .reservation-btn.book-btn:hover {
-  background-color: #37a59b;
-  border-color: #37a59b;
   color: #fff;
+  background-color: #52cbc0;
+  border-color: #52cbc0;
 }
 .reservation-head .reservation-btn.back-btn {
   background-color: #fff;
   color: #37a59b;
 }
 .reservation-head .reservation-btn.back-btn:hover {
-  background-color: #37a59b;
-  border-color: #37a59b;
   color: #fff;
+  background-color: #52cbc0;
+  border-color: #52cbc0;
 }
 @media (max-width: 991px) {
   .reservation-head .reservation-btn {
@@ -6039,7 +6190,7 @@ html[dir=rtl] .message-form .message-send svg {
   width: 100%;
   overflow-x: auto;
   scrollbar-width: thin;
-  scrollbar-color: #E2F2F1 #cfcfcf;
+  scrollbar-color: #37a59b #f1f1f1;
   margin-bottom: 40px;
 }
 @media (max-width: 991px) {
@@ -6048,13 +6199,13 @@ html[dir=rtl] .message-form .message-send svg {
   }
 }
 .categories-filters::-webkit-scrollbar {
-  background-color: #cfcfcf;
+  background-color: #f1f1f1;
   height: 4px;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 .categories-filters::-webkit-scrollbar-thumb {
-  background-color: #E2F2F1;
-  border-radius: 4px;
+  background-color: #37a59b;
+  border-radius: 3px;
 }
 .categories-filters .categories-list {
   display: flex;
@@ -7099,6 +7250,7 @@ html[dir=ltr] .auth-header .header-btn.back-btn i::before {
   border: none;
   height: 40px;
   color: #37a59b;
+  margin-bottom: 20px;
 }
 .add-input:hover {
   background-color: #37a59b;
