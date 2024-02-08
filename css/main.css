@@ -630,6 +630,11 @@ html[dir=ltr] select {
 .form-group .form-grid-2 {
   gap: 0 10px;
 }
+@media (max-width: 767px) {
+  .form-group .form-grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 .form-group {
   margin: 0 0 18px;
@@ -1309,7 +1314,7 @@ html[dir=ltr] .select2-container .select2-selection--multiple .select2-selection
   background-color: transparent;
   color: #37a59b;
 }
-.select2-container .select2-results__option.select2-results__option--selected::after {
+.select2-container .select2-results__options[aria-multiselectable=true] .select2-results__option.select2-results__option--selected::after {
   content: "\f00c";
   font-family: "Font Awesome 6 Pro";
   font-weight: 400;
@@ -2913,7 +2918,7 @@ header {
   transition: all 0.3s ease-in-out;
 }
 header.fixed {
-  box-shadow: 0px 4px 15px rgba(55, 165, 155, 0.2);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 header.fixed .header {
   padding: 10px;
@@ -3120,7 +3125,8 @@ footer .pattern {
 }
 @media (max-width: 991px) {
   footer .pattern {
-    top: 27px;
+    top: 100px;
+    transform: none;
   }
 }
 

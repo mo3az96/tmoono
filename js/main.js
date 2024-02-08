@@ -275,6 +275,10 @@ $(document).ready(function () {
     $("select").select2({
       minimumResultsForSearch: Infinity,
     });
+  } else{
+    $("select[multiple]").select2({
+      minimumResultsForSearch: Infinity,
+    });
   }
   //file input
   $(".upload-content input[type=file]").change(function () {
