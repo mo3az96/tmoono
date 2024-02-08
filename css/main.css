@@ -2115,6 +2115,11 @@ html[dir=ltr] .banner-content::after {
   background-color: #52cbc0;
   border-color: #52cbc0;
 }
+@media (max-width: 767px) {
+  .doctor-item .doctor-btn {
+    padding: 0 20px;
+  }
+}
 .doctor-item .doctor-hint {
   margin-inline-start: 20px;
   color: #fa404f;
