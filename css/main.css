@@ -1,4 +1,4 @@
-@font-face { 
+@font-face {
   font-family: "Bahij";
   src: url("../fonts/Bahij/BahijTheSansArabic-ExtraLight.woff2") format("woff2"), url("../fonts/Bahij/BahijTheSansArabic-ExtraLight.woff") format("woff"), url("../fonts/Bahij/BahijTheSansArabic-ExtraLight.ttf") format("truetype");
   font-weight: 100;
@@ -2339,7 +2339,7 @@ html[dir=ltr] .banner-content::after {
 
 .account-nav {
   position: sticky;
-  top: 20px;
+  top: 92px;
 }
 @media (max-width: 991px) {
   .account-nav {
@@ -3600,7 +3600,7 @@ html[dir=ltr] .contacts-list a:hover {
 
 .archive-sidebar {
   position: sticky;
-  top: 25px;
+  top: 92px;
 }
 @media (max-width: 991px) {
   .archive-sidebar {
@@ -4431,7 +4431,7 @@ html[dir=ltr] .filter-item .filter-title.active::after {
   max-width: 100%;
   overflow: hidden;
   position: sticky;
-  top: 20px;
+  top: 92px;
 }
 .checkout-page .side-card {
   position: relative;
@@ -6917,7 +6917,7 @@ html[dir=ltr] .faq-item .accordion-button::before {
   padding: 30px 30px 36px;
   overflow: hidden;
   position: sticky;
-  top: 20px;
+  top: 92px;
 }
 @media (max-width: 991px) {
   .side-nav {
