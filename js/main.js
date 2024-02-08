@@ -2,6 +2,12 @@ $(window).on("load", function () {
   $("body").removeClass("overflow");
 });
 $(document).ready(function () {
+  /************************************ Fixed Header ************************************/
+  $(window).scroll(function () {
+    $(this).scrollTop() >= 150
+      ? $("header:not(.auth-header,.success-header)").addClass("fixed")
+      : $("header:not(.auth-header,.success-header)").removeClass("fixed ");
+  });
   /************************************ Side Menu ************************************/
   $(".menu-btn").on("click", (e) => {
     if (e.isDefaultPrevented()) return;

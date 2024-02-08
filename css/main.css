@@ -2589,6 +2589,23 @@ html[dir=ltr] .account-list .main-link.active::after {
   background-color: #37a59b;
 }
 
+body {
+  padding: 90px 0 0;
+}
+@media (max-width: 991px) {
+  body {
+    padding: 65px 0 0;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    padding: 59px 0 0;
+  }
+}
+body:has(.auth-header), body:has(.success-header) {
+  padding: 0;
+}
+
 .page-content {
   padding: 30px 0 100px;
 }
@@ -2611,15 +2628,12 @@ html[dir=ltr] .account-list .main-link.active::after {
   }
 }
 
-header {
-  background-color: #37a59b;
-}
-
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 10px;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 991px) {
   .header {
@@ -2645,6 +2659,7 @@ header {
 .logo {
   display: flex;
   width: 127px;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 991px) {
   .logo {
@@ -2703,6 +2718,7 @@ header {
 }
 .lang-content .lang-head {
   height: 45px;
+  transition: all 0.3s ease-in-out;
 }
 .lang-content .lang-head::after {
   content: "\f078";
@@ -2887,6 +2903,43 @@ header {
   transform: scale(1);
 }
 
+header {
+  background-color: #37a59b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  transition: all 0.3s ease-in-out;
+}
+header.fixed {
+  box-shadow: 0px 4px 15px rgba(55, 165, 155, 0.2);
+}
+header.fixed .header {
+  padding: 10px;
+}
+@media (max-width: 991px) {
+  header.fixed .header {
+    padding: 7px 0;
+  }
+}
+header.fixed .logo {
+  width: 120px;
+}
+@media (max-width: 991px) {
+  header.fixed .logo {
+    width: 90px;
+  }
+}
+header.fixed .lang-content .lang-head {
+  height: 40px;
+}
+@media (max-width: 767px) {
+  header.fixed .lang-content .lang-head {
+    height: auto;
+  }
+}
+
 .nav-head {
   background-color: transparent;
   padding: 10px 20px;
@@ -3064,6 +3117,11 @@ footer .pattern {
   top: 50%;
   transform: translateY(-50%);
   inset-inline-end: -90.6px;
+}
+@media (max-width: 991px) {
+  footer .pattern {
+    top: 27px;
+  }
 }
 
 .footer {
@@ -4743,6 +4801,8 @@ html[dir=ltr] .filter-item .filter-title.active::after {
 
 .success-header {
   background-color: #F5FBFB;
+  position: relative;
+  inset: unset;
 }
 .success-header .header {
   justify-content: center;
@@ -7060,6 +7120,8 @@ html[dir=ltr] .side-nav .nav-body a::before {
 
 .auth-header {
   background-color: #F5FBFB;
+  position: relative;
+  inset: unset;
 }
 .auth-header .header-tools {
   gap: 20px;
