@@ -282,7 +282,8 @@
                               </span>
                             </div>
                             <button
-                              type="button"
+                              data-bs-toggle="modal"
+                              data-bs-target="#addModal"
                               class="doctor-wishlist active"
                             >
                               <i class="fa-regular fa-heart"></i>
@@ -351,6 +352,8 @@
                             </div>
                             <button
                               type="button"
+                              data-bs-toggle="modal"
+                              data-bs-target="#removeModal"
                               class="doctor-wishlist active"
                             >
                               <i class="fa-regular fa-heart"></i>
@@ -405,7 +408,11 @@
                                 تحديد موعد
                               </a>
                             </div>
-                            <button type="button" class="lab-wishlist active">
+                            <button
+                              data-bs-toggle="modal"
+                              data-bs-target="#removeModal"
+                              class="lab-wishlist active"
+                            >
                               <i class="fa-regular fa-heart"></i>
                             </button>
                           </div>
@@ -452,7 +459,11 @@
                                 تحديد موعد
                               </a>
                             </div>
-                            <button type="button" class="lab-wishlist active">
+                            <button
+                              data-bs-toggle="modal"
+                              data-bs-target="#addModal"
+                              class="lab-wishlist active"
+                            >
                               <i class="fa-regular fa-heart"></i>
                             </button>
                           </div>
@@ -682,6 +693,52 @@
       </div>
     </div>
     <!-- End Select City Modal -->
+
+    <!-- Start Remove From Whishlist Modal -->
+    <div class="modal fade" id="removeModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <i class="fa-regular fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <span class="alert-icon">
+              <i class="fa-light fa-circle-check"></i>
+            </span>
+            <h2 class="alert-title">تم الحذف من المفضله</h2>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="modal-btn main-btn">متابعة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Remove From Whishlist Modal -->
+
+    <!-- Start Add To Whishlist Modal -->
+    <div class="modal fade" id="addModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <i class="fa-regular fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <span class="alert-icon">
+              <i class="fa-light fa-circle-check"></i>
+            </span>
+            <h2 class="alert-title">تم الاضافة للمفضله بنجاح</h2>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="modal-btn main-btn">متابعة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Add To Whishlist Modal -->
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>

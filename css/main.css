@@ -7473,4 +7473,33 @@ html[dir=ltr] .auth-header .header-btn.back-btn i::before {
   width: -moz-fit-content;
   width: fit-content;
   padding: 0 20px;
+}
+
+.alert-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 72px;
+  color: #37a59b;
+  margin: 0 auto 15px;
+}
+.alert-icon.remove-icon {
+  color: #fa404f;
+}
+
+.alert-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #343434;
+  line-height: 1.625;
+  text-align: center;
+  margin: 0;
+}
+
+.remove-description {
+  font-size: 16px;
+  line-height: 1.625;
+  color: #343434;
+  text-align: center;
+  margin: 10px 0;
 }/*# sourceMappingURL=main.css.map */

@@ -184,7 +184,12 @@
                   </a>
                 </li>
                 <li>
-                  <a class="main-link" href="#!">
+                  <a
+                    class="main-link"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#removeModal"
+                  >
                     <i class="fa-light fa-trash-can"></i>
                     حذف الحساب
                   </a>
@@ -310,7 +315,14 @@
                       </div>
                     </div>
                   </div>
-                  <button class="submit-btn main-btn">حفظ التغييرات</button>
+                  <button
+                    type="button"
+                    class="submit-btn main-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#successModal"
+                  >
+                    حفظ التغييرات
+                  </button>
                 </form>
               </div>
             </div>
@@ -534,6 +546,62 @@
     </div>
     <!-- End Select City Modal -->
 
+    <!-- Start Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <i class="fa-regular fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <span class="alert-icon">
+              <i class="fa-light fa-circle-check"></i>
+            </span>
+            <h2 class="alert-title">تم حفظ التغييرات</h2>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="modal-btn main-btn">متابعة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Success Modal -->
+    <!-- Start Remove Modal -->
+    <div class="modal fade" id="removeModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <i class="fa-regular fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <span class="alert-icon remove-icon">
+              <i class="fa-light fa-trash-can"></i>
+            </span>
+            <h2 class="alert-title">تأكيد حذف الحساب</h2>
+            <p class="remove-description">
+              جميع البيانات والسجلات المرتبطه بالحساب سيتم فقدها
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="modal-btn main-btn">
+              تأكيد حذف الحساب
+            </button>
+            <button
+              type="button"
+              class="modal-btn sec-btn"
+              data-bs-dismiss="modal"
+            >
+              رجوع
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Remove Modal -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
