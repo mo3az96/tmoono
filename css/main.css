@@ -7401,4 +7401,55 @@ html[dir=ltr] .auth-header .header-btn.back-btn i::before {
 .add-input:hover {
   background-color: #37a59b;
   color: #fff;
+}
+
+.account-img {
+  width: 115px;
+  aspect-ratio: 1;
+  position: relative;
+  margin-bottom: 30px;
+}
+.account-img img {
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.account-img .edit-img {
+  position: absolute;
+  background-color: #37a59b;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  bottom: 0;
+  inset-inline-end: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.account-img .edit-img:hover {
+  background-color: #E2F2F1;
+  fill: #37a59b;
+}
+.account-img .edit-img input {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+.account-img .edit-img input::-webkit-file-upload-button {
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .account-img {
+    width: 95px;
+  }
 }/*# sourceMappingURL=main.css.map */

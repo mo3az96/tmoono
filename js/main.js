@@ -275,7 +275,7 @@ $(document).ready(function () {
     $("select").select2({
       minimumResultsForSearch: Infinity,
     });
-  } else{
+  } else {
     $("select[multiple]").select2({
       minimumResultsForSearch: Infinity,
     });
@@ -462,3 +462,9 @@ $(document).ready(function () {
     $("input[name=otp]").val(inputValue);
   }
 });
+
+function profileImg(input) {
+  $(".account-img img")[0].src = (
+    window.URL ? URL : webkitURL
+  ).createObjectURL(input.files[0]);
+}
