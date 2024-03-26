@@ -7452,4 +7452,12 @@ html[dir=ltr] .auth-header .header-btn.back-btn i::before {
   .account-img {
     width: 95px;
   }
+}
+
+.notification-item .item-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #343434;
+  line-height: 1.7857142857;
+  margin: 0 0 5px;
 }/*# sourceMappingURL=main.css.map */
