@@ -7460,4 +7460,17 @@ html[dir=ltr] .auth-header .header-btn.back-btn i::before {
   color: #343434;
   line-height: 1.7857142857;
   margin: 0 0 5px;
+}
+
+.empty-content {
+  padding-top: 40px;
+}
+.empty-content .success-icon {
+  color: #fa404f;
+}
+.empty-content .success-btn {
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 20px;
 }/*# sourceMappingURL=main.css.map */
